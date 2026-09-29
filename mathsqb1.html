@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>AP TET Paper-2A - Mathematics Practice Tests (Test 1 of 12) | 30 Questions</title>
+<meta name="description" content="AP TET Paper 2A Mathematics practice test, Test 1 of 8 (30 questions) now available. Free online mock test by C. Rasool Bavaji, ZPHS Madanapalle.">
+<style>
+  :root{
+    --bg1:#0b1e3d; --bg2:#123a63; --card:#0f2a4d; --accent:#3fa9f5; --accent2:#22c1a0;
+    --teal:#0d9488; --green:#16a34a; --red:#dc2626; --gold:#eab308; --text:#eaf2ff; --muted:#9db4d6;
+    --border:rgba(255,255,255,0.12);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:linear-gradient(160deg,var(--bg1),var(--bg2));color:var(--text);
+    font-family:'Segoe UI',Roboto,Arial,sans-serif;min-height:100%;}
+  body{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+  .wrap{max-width:800px;margin:0 auto;padding:14px;}
+  h1,h2,h3{margin:.2em 0;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px;margin-bottom:14px;
+    box-shadow:0 4px 18px rgba(0,0,0,.25);}
+  .credit{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+  .brand{text-align:center;margin-bottom:6px;}
+  .brand h1{font-size:1.2rem;color:var(--accent);}
+  .brand p{margin:2px 0;color:var(--muted);font-size:.85rem;}
+  input[type=text]{width:100%;padding:12px;font-size:16px;border-radius:10px;border:1px solid var(--border);
+    background:#0a2140;color:var(--text);margin-top:6px;}
+  label{font-size:.9rem;color:var(--muted);}
+  .btn{display:inline-block;min-height:46px;padding:0 18px;border-radius:10px;border:none;font-size:1rem;
+    font-weight:600;cursor:pointer;color:#04121f;background:var(--accent);}
+  .btn:disabled{opacity:.45;cursor:not-allowed;}
+  .btn.secondary{background:transparent;border:1px solid var(--accent);color:var(--accent);}
+  .btn.wide{width:100%;}
+  .btn.small{min-height:38px;padding:0 12px;font-size:.85rem;}
+  .row{display:flex;gap:10px;flex-wrap:wrap;}
+  .center{text-align:center;}
+  #lockScreen .count{font-size:2rem;letter-spacing:2px;color:var(--accent2);margin:14px 0;}
+  #lockScreen .lockicon{font-size:2.6rem;}
+  .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;align-items:center;
+    justify-content:space-between;gap:8px;background:rgba(10,30,55,.92);backdrop-filter:blur(4px);
+    padding:10px 12px;border-radius:12px;margin-bottom:12px;border:1px solid var(--border);flex-wrap:wrap;}
+  .pill{background:#0a2140;border:1px solid var(--border);border-radius:20px;padding:6px 12px;font-size:.82rem;
+    color:var(--muted);white-space:nowrap;}
+  .qhead{font-size:.85rem;color:var(--muted);margin-bottom:4px;}
+  .qtext{font-size:1.05rem;line-height:1.55;margin-bottom:14px;white-space:pre-line;}
+  .opt{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;
+    padding:12px 14px;margin:8px 0;border-radius:10px;border:1px solid var(--border);background:#0a2140;
+    color:var(--text);font-size:.98rem;cursor:pointer;min-height:46px;}
+  .opt .otext{white-space:pre-line;}
+  .opt.selected{background:rgba(13,148,136,.30);border-color:var(--teal);}
+  .opt.correct{background:rgba(22,163,74,.35);border-color:var(--green);}
+  .opt.wrong{background:rgba(220,38,38,.35);border-color:var(--red);}
+  .opt .tick{color:#4ade80;font-weight:900;font-size:1.2rem;}
+  .opt.disabled{cursor:default;}
+  .navrow{display:flex;justify-content:space-between;gap:10px;margin-top:10px;}
+  .progress{height:8px;background:#0a2140;border-radius:6px;overflow:hidden;margin:8px 0 4px;}
+  .progress > div{height:100%;background:var(--accent2);}
+  .scorering{width:140px;height:140px;border-radius:50%;margin:10px auto;display:flex;align-items:center;
+    justify-content:center;flex-direction:column;background:conic-gradient(var(--accent2) calc(var(--pct,0)*1%),
+    #0a2140 0);}
+  .scorering .inner{width:112px;height:112px;border-radius:50%;background:var(--card);display:flex;
+    align-items:center;justify-content:center;flex-direction:column;}
+  .statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;margin:12px 0;}
+  .statgrid div{background:#0a2140;border-radius:10px;padding:10px 4px;font-size:.85rem;}
+  .statgrid b{display:block;font-size:1.1rem;}
+  .panel{display:none;margin-top:12px;}
+  .panel.open{display:block;}
+  .respitem{border-bottom:1px solid var(--border);padding:10px 0;}
+  .respitem .tag{font-size:.78rem;padding:2px 8px;border-radius:10px;margin-left:6px;}
+  .tag.ok{background:rgba(22,163,74,.35);}
+  .tag.no{background:rgba(220,38,38,.35);}
+  .tag.skip{background:rgba(234,179,8,.35);}
+  table.lb{width:100%;border-collapse:collapse;font-size:.9rem;}
+  table.lb th,table.lb td{padding:8px 6px;border-bottom:1px solid var(--border);text-align:left;}
+  .testgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .testbtn{min-height:56px;background:#0a2140;border:1px solid var(--border);border-radius:12px;color:var(--text);
+    font-size:.9rem;cursor:pointer;padding:8px;}
+  .testbtn b{display:block;font-size:1rem;color:var(--accent);}
+  ::selection{background:transparent;}
+  @media (max-width:480px){
+    .wrap{padding:8px;}
+    .statgrid{grid-template-columns:repeat(3,1fr);font-size:.78rem;}
+    .scorering{width:120px;height:120px;}
+    .scorering .inner{width:96px;height:96px;}
+    .topbar{padding:8px;}
+    .testgrid{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+</head>
+<body oncontextmenu="return false;" onselectstart="return false;">
+<div class="wrap">
+
+  <div id="lockScreen" class="card center">
+    <div class="lockicon">&#128274;</div>
+    <h2>AP TET Paper-2A - Mathematics</h2>
+    <p>This quiz will open at <b>12:05 AM IST</b> on <b>27-09-2026</b>.</p>
+    <div class="count" id="lockCount">--:--:--</div>
+    <p style="color:var(--muted);font-size:.85rem;">Keep this page open - it will unlock automatically.</p>
+    <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT</div>
+  </div>
+
+  <div id="startScreen" class="card" style="display:none;">
+    <div class="brand">
+      <h1>AP TET Paper-2A &ndash; Mathematics</h1>
+      <p>Test 1 of 12 available now &middot; 30 Questions &middot; Bilingual (English + Telugu)</p>
+    </div>
+    <label for="nameInput">Your Name *</label>
+    <input type="text" id="nameInput" placeholder="Enter your full name">
+    <label for="distInput" style="margin-top:10px;display:block;">District *</label>
+    <input type="text" id="distInput" placeholder="Enter your district">
+    <div id="startErr" style="color:#f87171;font-size:.85rem;margin-top:8px;display:none;">
+      Please enter your name and district to continue.
+    </div>
+    <button class="btn wide" id="startBtn" style="margin-top:16px;">Continue</button>
+    <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT</div>
+  </div>
+
+  <div id="menuScreen" class="card" style="display:none;">
+    <div class="brand">
+      <h1>Choose a Test</h1>
+      <p>Each test has 30 questions. Questions &amp; options reshuffle every attempt.</p>
+    </div>
+    <div class="testgrid" id="testGrid"></div>
+    <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT</div>
+  </div>
+
+  <div id="quizScreen" style="display:none;">
+    <div class="topbar">
+      <span class="pill" id="testTitlePill">Test 1</span>
+      <span class="pill" id="scorePill">Score: 0</span>
+      <span class="pill" id="timerPill">00:00</span>
+      <button class="btn small" id="submitTopBtn">Submit</button>
+    </div>
+    <div class="card">
+      <div class="progress"><div id="progFill" style="width:0%;"></div></div>
+      <div class="qhead" id="qCounter">Question 1 of 30</div>
+      <div class="qtext" id="qText"></div>
+      <div id="optsBox"></div>
+      <div class="navrow">
+        <button class="btn secondary" id="prevBtn">&larr; Previous</button>
+        <button class="btn secondary" id="nextBtn">Next &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="confirmModal" class="card" style="display:none;">
+    <h3>Submit this test?</h3>
+    <p style="color:var(--muted);">You have answered <span id="confAnswered">0</span> of 30 questions.
+      Once submitted you cannot change your answers.</p>
+    <div class="row">
+      <button class="btn" id="confYes">Yes, Submit</button>
+      <button class="btn secondary" id="confNo">No, go back</button>
+    </div>
+  </div>
+
+  <div id="resultScreen" class="card" style="display:none;">
+    <h2 class="center" id="resultTitle">Test 1 Result</h2>
+    <div class="scorering" id="scoreRing"><div class="inner">
+      <b id="pctText" style="font-size:1.5rem;">0%</b>
+      <span style="font-size:.75rem;color:var(--muted);">Score</span>
+    </div></div>
+    <div class="statgrid">
+      <div><b id="statCorrect">0</b>Correct</div>
+      <div><b id="statWrong">0</b>Wrong</div>
+      <div><b id="statSkip">0</b>Not Answered</div>
+    </div>
+    <div class="statgrid" style="grid-template-columns:1fr 1fr;">
+      <div><b id="statTime">00:00</b>Time Taken</div>
+      <div><b id="statTotal">30</b>Questions</div>
+    </div>
+    <div class="row center" style="justify-content:center;">
+      <button class="btn" id="showRespBtn">Show Responses</button>
+      <button class="btn secondary" id="showLbBtn">Show Leaderboard</button>
+      <button class="btn secondary" id="backMenuBtn">Back to Test Menu</button>
+    </div>
+
+    <div id="respPanel" class="panel">
+      <h3>Answer Key &amp; Your Responses</h3>
+      <div id="respList"></div>
+    </div>
+
+    <div id="lbPanel" class="panel">
+      <h3>Leaderboard - Top 10 (this test)</h3>
+      <div id="lbStatus" style="color:var(--muted);font-size:.85rem;">Loading...</div>
+      <table class="lb" id="lbTable" style="display:none;">
+        <thead><tr><th>#</th><th>Name</th><th>District</th><th>Score</th><th>%</th></tr></thead>
+        <tbody id="lbBody"></tbody>
+      </table>
+      <button class="btn small secondary" id="lbRefreshBtn" style="margin-top:8px;">Refresh</button>
+    </div>
+
+    <div class="credit">C. RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT<br>
+      tenthquiz.blogspot.com</div>
+  </div>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // ====== CONFIG ======
+  // Paste your existing Google Apps Script Web App URL below to enable the
+  // per-test leaderboard and score logging. Leave blank to keep it showing
+  // "not connected yet" (each test still works fully without it).
+  var GOOGLE_SHEET_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+  var QUIZ_BASE_ID = "APTET_2A_MATHS";
+  var UNLOCK_TIME = new Date("2026-09-27T00:05:00+05:30").getTime();
+  var QSET_SIZE = 20;
+  var NUM_TESTS = 12;
+
+  // ====== ANTI-COPY / VIEW-SOURCE DETERRENTS (deterrent only) ======
+  document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+  document.addEventListener('keydown', function(e){
+    var k = e.key ? e.key.toLowerCase() : '';
+    if (e.key === 'F12') { e.preventDefault(); return; }
+    if (e.ctrlKey && (k === 'u' || k === 's' || k === 'c')) { e.preventDefault(); return; }
+    if (e.ctrlKey && e.shiftKey && (k === 'i' || k === 'j' || k === 'c')) { e.preventDefault(); return; }
+  });
+  document.addEventListener('copy', function(e){ e.preventDefault(); });
+  document.addEventListener('selectstart', function(e){ e.preventDefault(); });
+
+  // ====== DATA ======
+  var ALL_QUESTIONS = [{"q":"Number of two digit numbers that are divisible by 4 is\n4 చే నిశ్శేషంగా భాగింపబడే రెండంకెల సంఖ్యల సంఖ్య","o":["21","22","23","24"],"c":1,"sol":"Two-digit multiples of 4 run from 12 to 96. Count = (96-12)/4 + 1 = 22."},{"q":"LCM of two numbers is 120 and their HCF is 10 if one of the number is 30 then the other number is\nరెండు సంఖ్యల క. సా. గు 120 మరియు వాటి గ. సా. భా 10 అందులో ఒక సంఖ్య 30 అయితే రెండవ సంఖ్య","o":["20","40","60","80"],"c":1,"sol":"Other number = (LCM × HCF) / given number = (120 × 10) / 30 = 40."},{"q":"Which of the following is terminating decimal\nఈ క్రింది వానిలో ఏది అంతమయ్యే దశాంశము","o":["77/210","21/60","8/15","12/55"],"c":1,"sol":"Simplify each: 77/210=11/30 (has 3 → non-terminating); 21/60=7/20, 20=2²×5 → terminating; 8/15 has 3; 12/55 has 11. Answer: 21/60."},{"q":"Which of the following is not a prime\nఈ క్రింది వానిలో ప్రధాన సంఖ్య కానిది","o":["4² + 5²","5² + 6²","6² + 7²","7² + 8²"],"c":2,"sol":"4²+5²=41 (prime), 5²+6²=61 (prime), 6²+7²=85=5×17 (not prime), 7²+8²=113 (prime). Answer: 6²+7²."},{"q":"The smallest three digit number that is divisible by 4, 6 and 8 is\n4, 6 మరియు 8 ల చే నిశ్శేషంగా భాగించ బడే అతి చిన్న మూడంకెల సంఖ్య","o":["108","114","120","144"],"c":2,"sol":"LCM(4,6,8)=24. Smallest 3-digit multiple of 24 is 120."},{"q":"HCF of 75, 105 and 175 is\n75, 105 మరియు 175 ల గ. సా. భా","o":["5","7","15","35"],"c":0,"sol":"75=3×5², 105=3×5×7, 175=5²×7. Common factor: 5. HCF=5."},{"q":"Total number of factors of 600 is\n600 నకు గల మొత్తం కారణాంకాముల సంఖ్య","o":["20","24","30","36"],"c":1,"sol":"600 = 2³×3×5². Number of factors = (3+1)(1+1)(2+1) = 4×2×3 = 24."},{"q":"A rational number in between 1/4 and 1/2 is\n1/4 మరియు 1/2 ల మధ్య గల ఒక అకరణీయ సంఖ్య","o":["3/7","4/7","5/8","6/11"],"c":0,"sol":"1/4=0.25, 1/2=0.5. Check: 3/7≈0.43 (fits); 4/7≈0.57; 5/8=0.625; 6/11≈0.55. Answer: 3/7."},{"q":"The Average of 4.2, 3.8 and 7.6 is\n4.2, 3.8 మరియు 7.6 యొక్క సగటు","o":["4.2","4.8","5.2","4.6"],"c":2,"sol":"Average = (4.2+3.8+7.6)/3 = 15.6/3 = 5.2."},{"q":"Half of 0.1 is\n0.1 నందు సగము","o":["0.02","0.5","0.05","0.2"],"c":2,"sol":"Half of 0.1 = 0.1 ÷ 2 = 0.05."},{"q":"LCM of 20, 25 and 30 is\n20, 25 మరియు 30 ల క. సా. గు","o":["240","120","150","300"],"c":3,"sol":"LCM(20,25,30): 20=2²×5, 25=5², 30=2×3×5 → LCM = 2²×3×5² = 300."},{"q":"Which of the following numbers are co-prime\nఈ క్రింది వాటిలో ఏ సంఖ్యలు సాపేక్ష ప్రధానాంకాలు","o":["120, 144","215, 216","35, 165","121, 143"],"c":1,"sol":"Check gcd: (120,144)=24; (215,216)=1 (consecutive integers, always co-prime); (35,165)=5; (121,143)=11. Answer: 215, 216."},{"q":"Number of digits in the square of a five-digit number is\nఐదు అంకెల సంఖ్య యొక్క వర్గము లో ఉండు అంకెల సంఖ్య","o":["9 or 10\n9 లేదా 10","10 or 11\n10 లేదా 11","10 or 12\n10 లేదా 12","11 or 12\n11 లేదా 12"],"c":0,"sol":"Smallest 5-digit number 10000² = 100000000 (9 digits); largest 99999² ≈ 9999800001 (10 digits). So 9 or 10 digits."},{"q":"How many consecutive odd positive integers added to get 144\nఎన్ని వరుస ధన బేసి పూర్ణ సంఖ్యల మొత్తము 144 అగును","o":["8","10","12","14"],"c":2,"sol":"Sum of first n odd numbers = n². n² = 144 → n = 12."},{"q":"Total number of three-digits perfect squares\nమూడు అంకెలు గల పరిపూర్ణ వర్గ సంఖ్యలు ఎన్ని","o":["20","21","22","23"],"c":2,"sol":"3-digit perfect squares run from 10²=100 to 31²=961 (32²=1024 is 4 digits). Count = 31-10+1 = 22."},{"q":"which of the following is not a perfect square\nఈ క్రింది వానిలో ఖచ్చిత వర్గము కానిది","o":["1444","2744","3844","7744"],"c":1,"sol":"√1444=38 ✓, √3844=62 ✓, √7744=88 ✓ — all perfect squares. √2744≈52.38, not a perfect square (2744=14³, a perfect cube instead)."},{"q":"[(3.2)³ + (1.8)³] / [(3.2)² − 5.76 + (1.8)²] =","o":["5","5.2","5.1","6"],"c":0,"sol":"Using a³+b³ = (a+b)(a²−ab+b²) with a=3.2, b=1.8 and ab=5.76: the denominator equals a²−ab+b², so the expression simplifies to a+b = 3.2+1.8 = 5."},{"q":"The smallest-square number that is divisible by each of the numbers 4, 9 and 10 is\n4, 9 మరియు 10 ల చే భాగింపబడు కనిష్ఠ వర్గ సంఖ్య","o":["180","360","900","1600"],"c":2,"sol":"LCM(4,9,10) = 2²×3²×5 = 180. For a perfect square every prime's power must be even; 5¹ is odd, so multiply by 5: 180×5 = 900 = 30²."},{"q":"∛3375 =","o":["15","25","35","45"],"c":0,"sol":"15³ = 3375, so ∛3375 = 15."},{"q":"101³ =","o":["100030001","1003001","1030301","103301"],"c":2,"sol":"101³ = 101×101×101 = 10201×101 = 1,030,301."}] // 20 items — Test 1 only (Tests 2-12 coming soon);   // 630 items, in original serial order
+
+  function shuffle(arr){
+    for (var i = arr.length - 1; i > 0; i--){
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = arr[i]; arr[i] = arr[j]; arr[j] = t;
+    }
+    return arr;
+  }
+  function pad(n){ return n < 10 ? "0" + n : "" + n; }
+  function fmtTime(sec){
+    var m = Math.floor(sec / 60), s = sec % 60;
+    return pad(m) + ":" + pad(s);
+  }
+  function escapeHtml(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  var studentName = "", studentDistrict = "";
+  var currentTest = 1;
+  var testQuestions = [];   // shuffled 30 objects with {label, q, o(shuffled text), correctIdx(shuffled)}
+  var answers = [];         // chosen shuffled-option-index per question, or -1
+  var locked = [];          // whether question already answered/locked
+  var current = 0;
+  var startTime = null;
+  var timerInterval = null;
+
+  // ====== LOCK SCREEN ======
+  var lockScreen = document.getElementById('lockScreen');
+  var startScreen = document.getElementById('startScreen');
+
+  function checkLock(){
+    var now = Date.now();
+    if (now >= UNLOCK_TIME){
+      lockScreen.style.display = 'none';
+      startScreen.style.display = 'block';
+      if (window._lockInt) clearInterval(window._lockInt);
+      return;
+    }
+    var diff = Math.max(0, UNLOCK_TIME - now);
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('lockCount').textContent = pad(h) + ":" + pad(m) + ":" + pad(s);
+  }
+  checkLock();
+  window._lockInt = setInterval(checkLock, 1000);
+
+  // ====== START SCREEN ======
+  document.getElementById('startBtn').addEventListener('click', function(){
+    var nm = document.getElementById('nameInput').value.trim();
+    var ds = document.getElementById('distInput').value.trim();
+    if (!nm || !ds){
+      document.getElementById('startErr').style.display = 'block';
+      return;
+    }
+    studentName = nm; studentDistrict = ds;
+    startScreen.style.display = 'none';
+    showMenu();
+  });
+
+  // ====== TEST MENU ======
+  function showMenu(){
+    var grid = document.getElementById('testGrid');
+    grid.innerHTML = '';
+    for (var t = 1; t <= NUM_TESTS; t++){
+      var base = (t - 1) * QSET_SIZE;
+      var available = (base + QSET_SIZE) <= ALL_QUESTIONS.length;
+      var b = document.createElement('button');
+      b.className = 'testbtn';
+      if (!available){
+        b.style.opacity = '0.4';
+        b.disabled = true;
+        b.innerHTML = '<b>Test ' + t + '</b>Coming soon';
+      } else {
+        b.innerHTML = '<b>Test ' + t + '</b>Q.' + (base + 1) + ' - Q.' + (base + QSET_SIZE);
+        (function(tn){
+          b.addEventListener('click', function(){ startTest(tn); });
+        })(t);
+      }
+      grid.appendChild(b);
+    }
+    document.getElementById('menuScreen').style.display = 'block';
+  }
+
+  // ====== START A TEST ======
+  function startTest(testNum){
+    currentTest = testNum;
+    var base = (testNum - 1) * QSET_SIZE;
+    var chunk = ALL_QUESTIONS.slice(base, base + QSET_SIZE);
+    var shuffledChunk = shuffle(chunk.slice());   // shuffle question order within this test
+
+    testQuestions = shuffledChunk.map(function(qObj, posIdx){
+      var optIdx = [0,1,2,3];
+      shuffle(optIdx);
+      var shuffledOpts = optIdx.map(function(oi){ return qObj.o[oi]; });
+      var correctShuffledIdx = optIdx.indexOf(qObj.c);
+      return {
+        label: base + posIdx + 1,   // serial number stays sequential & in order, position-based
+        q: qObj.q,
+        o: shuffledOpts,
+        correct: correctShuffledIdx
+      };
+    });
+
+    answers = new Array(QSET_SIZE).fill(-1);
+    locked = new Array(QSET_SIZE).fill(false);
+    current = 0;
+    startTime = Date.now();
+
+    document.getElementById('menuScreen').style.display = 'none';
+    document.getElementById('resultScreen').style.display = 'none';
+    document.getElementById('quizScreen').style.display = 'block';
+    document.getElementById('testTitlePill').textContent = 'Test ' + testNum;
+    updateScorePill();
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(updateTimer, 1000);
+    renderQuestion();
+  }
+
+  function updateTimer(){
+    var sec = Math.floor((Date.now() - startTime) / 1000);
+    document.getElementById('timerPill').textContent = fmtTime(sec);
+  }
+
+  function updateScorePill(){
+    var correct = 0;
+    for (var i = 0; i < testQuestions.length; i++){
+      if (locked[i] && answers[i] === testQuestions[i].correct) correct++;
+    }
+    document.getElementById('scorePill').textContent = 'Score: ' + correct;
+  }
+
+  function renderQuestion(){
+    var q = testQuestions[current];
+    document.getElementById('qCounter').textContent =
+      'Question ' + (current + 1) + ' of ' + QSET_SIZE + '  (Q.' + q.label + ')';
+    document.getElementById('qText').textContent = 'Q.' + q.label + '.  ' + q.q;
+    document.getElementById('progFill').style.width =
+      Math.round(((current + 1) / QSET_SIZE) * 100) + '%';
+
+    var box = document.getElementById('optsBox');
+    box.innerHTML = '';
+    q.o.forEach(function(text, idx){
+      var b = document.createElement('button');
+      var cls = 'opt';
+      var tick = '';
+      if (locked[current]){
+        cls += ' disabled';
+        if (idx === q.correct) { cls += ' correct'; tick = '<span class="tick">&#10003;</span>'; }
+        else if (idx === answers[current]) { cls += ' wrong'; }
+      } else if (answers[current] === idx){
+        cls += ' selected';
+      }
+      b.className = cls;
+      b.innerHTML = '<span class="otext">' + String.fromCharCode(65 + idx) + '.  ' +
+                     escapeHtml(text) + '</span>' + tick;
+      if (!locked[current]){
+        b.addEventListener('click', function(){
+          answers[current] = idx;
+          locked[current] = true;
+          renderQuestion();
+          updateScorePill();
+        });
+      }
+      box.appendChild(b);
+    });
+
+    document.getElementById('prevBtn').disabled = (current === 0);
+    document.getElementById('nextBtn').textContent =
+      (current === QSET_SIZE - 1) ? 'Last Question' : 'Next \u2192';
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', function(){
+    if (current > 0){ current--; renderQuestion(); }
+  });
+  document.getElementById('nextBtn').addEventListener('click', function(){
+    if (current < QSET_SIZE - 1){ current++; renderQuestion(); }
+  });
+
+  // ====== SUBMIT FLOW ======
+  var confirmModal = document.getElementById('confirmModal');
+  document.getElementById('submitTopBtn').addEventListener('click', function(){
+    document.getElementById('confAnswered').textContent =
+      answers.filter(function(a){ return a !== -1; }).length;
+    confirmModal.style.display = 'block';
+  });
+  document.getElementById('confNo').addEventListener('click', function(){
+    confirmModal.style.display = 'none';
+  });
+  document.getElementById('confYes').addEventListener('click', function(){
+    confirmModal.style.display = 'none';
+    finishTest();
+  });
+
+  function finishTest(){
+    clearInterval(timerInterval);
+    var timeTakenSec = Math.floor((Date.now() - startTime) / 1000);
+    var correct = 0, wrong = 0, skip = 0;
+    for (var i = 0; i < QSET_SIZE; i++){
+      if (answers[i] === -1){ skip++; continue; }
+      if (answers[i] === testQuestions[i].correct) correct++; else wrong++;
+    }
+    var pct = Math.round((correct / QSET_SIZE) * 100);
+
+    document.getElementById('quizScreen').style.display = 'none';
+    document.getElementById('resultScreen').style.display = 'block';
+    document.getElementById('resultTitle').textContent = 'Test ' + currentTest + ' Result';
+    document.getElementById('pctText').textContent = pct + '%';
+    document.getElementById('scoreRing').style.setProperty('--pct', pct);
+    document.getElementById('statCorrect').textContent = correct;
+    document.getElementById('statWrong').textContent = wrong;
+    document.getElementById('statSkip').textContent = skip;
+    document.getElementById('statTime').textContent = fmtTime(timeTakenSec);
+    document.getElementById('statTotal').textContent = QSET_SIZE;
+    document.getElementById('respPanel').classList.remove('open');
+    document.getElementById('lbPanel').classList.remove('open');
+
+    submitToSheet(correct, pct, timeTakenSec);
+    buildResponses();
+  }
+
+  function buildResponses(){
+    var list = document.getElementById('respList');
+    var html = '';
+    for (var i = 0; i < QSET_SIZE; i++){
+      var q = testQuestions[i];
+      var chosen = answers[i];
+      html += '<div class="respitem"><b>Q.' + q.label + '.</b> ' + escapeHtml(q.q);
+      if (chosen === -1){
+        html += ' <span class="tag skip">Not answered</span>';
+      } else if (chosen === q.correct){
+        html += ' <span class="tag ok">Correct</span>';
+      } else {
+        html += ' <span class="tag no">Wrong</span>';
+      }
+      html += '<div style="margin-top:6px;">';
+      q.o.forEach(function(text, idx){
+        var tagText = '';
+        if (idx === q.correct) tagText = ' &#10003; Correct';
+        if (idx === chosen && idx !== q.correct) tagText += ' (Your Answer)';
+        else if (idx === chosen && idx === q.correct) tagText += ' (Your Answer)';
+        var color = (idx === q.correct) ? 'color:#4ade80;' :
+                    (idx === chosen ? 'color:#f87171;' : 'color:var(--muted);');
+        html += '<div style="' + color + 'font-size:.92rem;padding:2px 0;white-space:pre-line;">' +
+                String.fromCharCode(65+idx) + '. ' + escapeHtml(text) + tagText + '</div>';
+      });
+      if (q.sol){
+        html += '<div style="margin-top:8px;padding:8px 10px;background:rgba(96,165,250,.08);' +
+                'border-left:3px solid #60a5fa;border-radius:4px;font-size:.9rem;' +
+                'color:var(--muted);"><b style="color:#93c5fd;">Solution:</b> ' +
+                escapeHtml(q.sol) + '</div>';
+      }
+      html += '</div></div>';
+    }
+    list.innerHTML = html;
+  }
+
+  document.getElementById('showRespBtn').addEventListener('click', function(){
+    document.getElementById('respPanel').classList.toggle('open');
+    document.getElementById('lbPanel').classList.remove('open');
+  });
+  document.getElementById('showLbBtn').addEventListener('click', function(){
+    document.getElementById('lbPanel').classList.toggle('open');
+    document.getElementById('respPanel').classList.remove('open');
+    if (document.getElementById('lbPanel').classList.contains('open')) loadLeaderboard();
+  });
+  document.getElementById('lbRefreshBtn').addEventListener('click', loadLeaderboard);
+  document.getElementById('backMenuBtn').addEventListener('click', function(){
+    document.getElementById('resultScreen').style.display = 'none';
+    showMenu();
+  });
+
+  // ====== GOOGLE SHEET LEADERBOARD (per test) ======
+  function quizId(){ return QUIZ_BASE_ID + '_T' + String(currentTest).padStart(2,'0'); }
+
+  function isConfigured(){
+    return GOOGLE_SHEET_URL && GOOGLE_SHEET_URL.indexOf('PASTE_YOUR') === -1;
+  }
+
+  function submitToSheet(correct, pct, timeTakenSec){
+    if (!isConfigured()) return;
+    var payload = {
+      name: studentName, district: studentDistrict, quiz: quizId(),
+      score: correct, total: QSET_SIZE, percent: pct, timeTaken: timeTakenSec
+    };
+    fetch(GOOGLE_SHEET_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: {'Content-Type':'text/plain'},
+      body: JSON.stringify(payload)
+    }).catch(function(){ /* fails gracefully offline */ });
+  }
+
+  function loadLeaderboard(){
+    var status = document.getElementById('lbStatus');
+    var table = document.getElementById('lbTable');
+    var body = document.getElementById('lbBody');
+    if (!isConfigured()){
+      status.textContent = 'Leaderboard not connected yet.';
+      table.style.display = 'none';
+      return;
+    }
+    status.textContent = 'Loading...';
+    table.style.display = 'none';
+    fetch(GOOGLE_SHEET_URL + '?quiz=' + encodeURIComponent(quizId()))
+      .then(function(r){ return r.json(); })
+      .then(function(rows){
+        if (!rows || !rows.length){
+          status.textContent = 'No scores yet - be the first!';
+          return;
+        }
+        rows.sort(function(a,b){ return (b.percent - a.percent) || (a.timeTaken - b.timeTaken); });
+        rows = rows.slice(0, 10);
+        body.innerHTML = rows.map(function(r, i){
+          return '<tr><td>' + (i+1) + '</td><td>' + escapeHtml(r.name||'') + '</td><td>' +
+                 escapeHtml(r.district||'') + '</td><td>' + r.score + '/' + r.total +
+                 '</td><td>' + r.percent + '%</td></tr>';
+        }).join('');
+        status.textContent = '';
+        table.style.display = 'table';
+      })
+      .catch(function(){
+        status.textContent = 'Leaderboard not connected yet.';
+      });
+  }
+
+})();
+</script>
+</body>
+</html>
