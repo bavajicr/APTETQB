@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>APTET Paper 2A – Full Mock Test 09</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0b2447;--navy2:#19376d;--teal:#0e9aa7;--tealbg:#e3f6f7;--blue:#1d4ed8;--bluebg:#dbe7ff;--purple:#7e3ff2;--purplebg:#efe5ff;--bg:#f3f5f9;--card:#fff;--tx:#18212f;--mut:#5b6678;--line:#d3dae6;--amber:#d97706}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--tx);font-family:'Inter','Noto Sans Telugu',system-ui,sans-serif;font-size:15px}
+body,.noselect{-webkit-user-select:none;-moz-user-select:none;user-select:none;-webkit-touch-callout:none}
+input{-webkit-user-select:text;user-select:text}
+.hidden{display:none!important}
+.wrap{max-width:1180px;margin:0 auto;padding:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.btn{border:1px solid transparent;border-radius:8px;padding:10px 16px;font:600 14px 'Inter',sans-serif;cursor:pointer;color:#fff;background:var(--teal)}
+.btn.sec{background:#fff;color:var(--navy);border-color:var(--line)}
+.btn.navy{background:var(--navy)}.btn.rev{background:var(--purple)}.btn.warn{background:var(--amber)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.credit{text-align:center;font-size:12px;color:var(--mut);padding:12px 6px;line-height:1.55}
+.credit b{color:var(--navy)}.credit a{color:var(--blue);font-weight:600;text-decoration:none}
+/* start */
+.hero{background:var(--navy);color:#fff;border-radius:10px;padding:20px 16px;text-align:center;border-bottom:4px solid var(--teal)}
+.hero h1{margin:0;font-size:20px;letter-spacing:.2px}.hero h2{margin:4px 0 0;font-size:13px;font-weight:500;color:#9be4ea;letter-spacing:1.5px}
+.hero p{margin:10px 0 0;font-size:12.5px;opacity:.85}
+label{display:block;font-weight:600;font-size:13px;margin:14px 0 4px}
+input[type=text]{width:100%;padding:12px;border:1.5px solid var(--line);border-radius:8px;font:15px 'Inter','Noto Sans Telugu',sans-serif;background:#fff}
+input[type=text]:focus{outline:0;border-color:var(--teal)}
+.err{color:#b42318;font-size:13px;margin-top:8px;min-height:18px;font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}
+.facts div{background:var(--tealbg);border-radius:8px;padding:9px 6px;text-align:center;font-size:12px;color:var(--mut)}.facts b{display:block;font-size:16px;color:var(--navy)}
+.instr{font-size:13px;line-height:1.7;color:#374253;background:#f7f9fc;border:1px solid var(--line);border-radius:8px;padding:10px 14px;margin-top:12px}
+.instr ul{margin:4px 0 0;padding-left:18px}
+.notice{border-radius:8px;padding:10px 12px;font-size:13.5px;margin-top:12px;font-weight:600}
+.notice.info{background:var(--tealbg);color:#0b5f68}.notice.bad{background:#fdecea;color:#912018}
+/* exam header */
+.hdr{position:sticky;top:0;z-index:30;background:var(--navy);color:#fff}
+.hrow{display:flex;align-items:center;gap:12px;padding:8px 12px;max-width:1280px;margin:0 auto;flex-wrap:wrap}
+.htitle{flex:1;min-width:200px}.htitle b{display:block;font-size:14px}.htitle small{color:#9be4ea;font-size:11.5px}
+.who{font-size:12px;color:#dbe4f3;text-align:right}.who b{color:#fff}
+.timer{background:#fff;color:var(--navy);border-radius:8px;padding:5px 12px;text-align:center;line-height:1.15}
+.timer small{display:block;font-size:10px;color:var(--mut);font-weight:600;letter-spacing:.8px}.timer b{font-size:19px;font-variant-numeric:tabular-nums}
+.timer.low{background:#fff3d6}.timer.low b{color:#b45309}
+.subs{display:flex;gap:6px;overflow-x:auto;padding:0 12px 8px;max-width:1280px;margin:0 auto}
+.sbtn{flex:0 0 auto;border:1px solid rgba(255,255,255,.28);background:transparent;color:#fff;border-radius:6px;padding:6px 12px;font:600 12.5px 'Inter',sans-serif;cursor:pointer}
+.sbtn.on{background:var(--teal);border-color:var(--teal)}
+.sbtn i{font-style:normal;font-weight:400;opacity:.85;margin-left:5px}
+/* layout */
+.main{display:grid;grid-template-columns:1fr 330px;gap:12px;max-width:1280px;margin:12px auto;padding:0 12px}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:8px;border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:12px;flex-wrap:wrap}
+.qhead b{color:var(--navy)}.qhead span{font-size:12.5px;color:var(--mut)}
+.badge{display:inline-block;background:var(--purplebg);color:var(--purple);border:1px solid var(--purple);border-radius:20px;padding:2px 10px;font-size:11.5px;font-weight:700}
+.qtext{font-size:17px;line-height:1.7;white-space:pre-line;font-weight:500;margin-bottom:14px}
+.opt{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--line);border-radius:10px;padding:12px;margin:9px 0;cursor:pointer;background:#fff;font-size:16px;line-height:1.55;white-space:pre-line}
+.opt .l{flex:0 0 30px;height:30px;border-radius:50%;border:1.5px solid var(--line);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;background:#fff}
+.opt:hover{border-color:#8fa9de}
+.opt.sel{background:var(--bluebg);border-color:var(--blue)}.opt.sel .l{background:var(--blue);border-color:var(--blue);color:#fff}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+.actions .sp{flex:1}
+.pal h3{margin:0 0 8px;font-size:13px;color:var(--navy)}
+.psum{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px}
+.psum div{background:#f4f6fa;border-radius:8px;padding:6px 4px;text-align:center;font-size:11px;color:var(--mut)}.psum b{display:block;font-size:15px;color:var(--navy)}
+.pscroll{max-height:58vh;overflow:auto;padding-right:2px}
+.ph{font-size:12px;font-weight:700;color:#fff;background:var(--navy2);border-radius:5px;padding:4px 8px;margin:10px 0 6px}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.pb{position:relative;border:1.5px solid var(--line);border-radius:7px;background:#fff;padding:7px 0;font:600 12.5px 'Inter',sans-serif;cursor:pointer;color:#344}
+.pb.ans{background:var(--blue);border-color:var(--blue);color:#fff}
+.pb.rev{background:var(--purple);border-color:var(--purple);color:#fff}
+.pb.ansrev{background:var(--blue);border-color:var(--purple);color:#fff;box-shadow:inset 0 0 0 2px var(--purple)}
+.pb.ansrev:after,.pb.rev:after{content:"★";position:absolute;top:-6px;right:-3px;font-size:11px;color:var(--purple);background:#fff;border-radius:50%;line-height:12px;width:13px;height:13px}
+.pb.cur{outline:3px solid var(--teal);outline-offset:1px}
+.legend{display:grid;grid-template-columns:1fr 1fr;gap:5px;font-size:11.5px;margin-top:12px;color:var(--mut)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-3px;margin-right:5px;border:1.5px solid var(--line);background:#fff}
+.legend .a{background:var(--blue);border-color:var(--blue)}.legend .r{background:var(--purple);border-color:var(--purple)}.legend .ar{background:var(--blue);border-color:var(--purple);box-shadow:inset 0 0 0 2px var(--purple)}.legend .c{outline:3px solid var(--teal);outline-offset:0;border-color:var(--line)}
+.pfab{display:none}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(8,18,38,.62);z-index:60;display:flex;align-items:center;justify-content:center;padding:14px}
+.mbox{background:#fff;border-radius:12px;padding:20px;max-width:450px;width:100%;max-height:88vh;overflow:auto}
+.mbox h2{margin:0 0 8px;font-size:18px;color:var(--navy)}
+.mrow{display:flex;gap:10px;margin-top:16px}.mrow .btn{flex:1}
+.sumt{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}.sumt td{padding:6px 4px;border-bottom:1px solid var(--line)}.sumt td:last-child{text-align:right;font-weight:700}
+/* result */
+.score-big{font-size:48px;font-weight:700;color:var(--navy);line-height:1.1}
+.res-top{text-align:center}
+.bd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.bd div{background:#f4f6fa;border-radius:8px;padding:8px;font-size:12px;text-align:center;color:var(--mut)}.bd b{display:block;font-size:16px;color:var(--navy)}
+.subt{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0}
+.subt th{background:var(--navy);color:#fff;text-align:left;padding:7px}.subt td{border-bottom:1px solid var(--line);padding:7px}
+.bar{height:8px;border-radius:4px;background:#e6ebf3;overflow:hidden}.bar i{display:block;height:100%;background:var(--teal)}
+.fl{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.fl button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 12px;font:600 12px 'Inter',sans-serif;cursor:pointer}.fl button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.rv{border:1px solid var(--line);border-radius:10px;padding:12px;margin:10px 0;background:#fff}
+.rv .t{font-size:12px;color:var(--mut);margin-bottom:4px}
+.rv .q{white-space:pre-line;font-weight:500;line-height:1.6}
+.rv .st{display:inline-block;font-size:11.5px;font-weight:700;border-radius:5px;padding:2px 8px;margin-right:6px}
+.st.c{background:#dff5e6;color:#14532d}.st.w{background:#fde4e1;color:#912018}.st.u{background:#eceff4;color:#475467}
+.rv .a{font-size:14px;margin-top:6px;white-space:pre-line}.rv .e{margin-top:6px;background:var(--tealbg);border-radius:6px;padding:7px 9px;font-size:13px}
+.lb{width:100%;border-collapse:collapse;font-size:13px}.lb th{background:var(--navy);color:#fff;padding:6px;text-align:left}.lb td{padding:6px;border-bottom:1px solid var(--line)}.lb tr.me td{background:#fff3c4;font-weight:700}
+@media(max-width:920px){
+ .main{grid-template-columns:1fr}
+ .pal{position:fixed;left:0;right:0;bottom:0;z-index:50;border-radius:14px 14px 0 0;max-height:72vh;overflow:auto;transform:translateY(105%);transition:transform .2s;border-color:var(--navy)}
+ .pal.open{transform:none}.pscroll{max-height:none}
+ .pfab{display:block;position:fixed;right:12px;bottom:14px;z-index:40;background:var(--navy);color:#fff;border:0;border-radius:24px;padding:11px 16px;font:600 13px 'Inter',sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.35)}
+ .qtext{font-size:16px}.opt{font-size:15px}.who{display:none}body{padding-bottom:64px}
+ .facts{grid-template-columns:repeat(2,1fr)}
+}
+/* ---- printable PDF report ---- */
+#printArea{display:none}
+.pr h1{font-size:17px;margin:0;color:#0b2447}.pr .sub{font-size:11px;color:#444;margin:2px 0 8px}
+.pr table{width:100%;border-collapse:collapse;font-size:11px;margin:6px 0 10px}.pr th{background:#0b2447;color:#fff;text-align:left;padding:4px 6px}.pr td{border:1px solid #bbb;padding:4px 6px}
+.pq{border:1px solid #bbb;border-radius:5px;padding:6px 8px;margin:6px 0;break-inside:avoid;page-break-inside:avoid;font-size:11.5px;line-height:1.45}
+.pq .h{font-size:10px;color:#555;display:flex;justify-content:space-between;margin-bottom:2px}
+.pq .q{white-space:pre-line;font-weight:600;margin-bottom:3px}
+.pq .o{white-space:pre-line;padding:2px 5px;border-radius:3px;margin:1px 0;border:1px solid transparent}
+.pq .o.ck{background:#dff5e6!important;border-color:#2e9d57}.pq .o.wr{background:#fde4e1!important;border-color:#d4483b}
+.pq .tag{font-weight:700;font-size:10px;margin-left:6px}
+.pq .stt{font-weight:700;font-size:10px;border-radius:3px;padding:1px 6px}
+.pq .stt.c{background:#dff5e6;color:#14532d}.pq .stt.w{background:#fde4e1;color:#912018}.pq .stt.u{background:#e6e8ec;color:#333}
+.pq .ex{font-size:10.5px;background:#eef5f6!important;padding:3px 5px;border-radius:3px;margin-top:3px}
+.pfoot{display:none}
+ #pdfStage .pg .ph1{border-bottom:3px solid #0e9aa7;padding-bottom:6px;margin-bottom:8px}
+ #pdfStage .pg h1{margin:0;font-size:16pt;color:#0b2447}#pdfStage .pg h2{margin:2px 0 0;font-size:10pt;color:#0e9aa7;letter-spacing:1px}
+ #pdfStage .pg .meta{font-size:10.5pt;line-height:1.55;margin:6px 0}
+ #pdfStage .pg .big{font-size:15pt;font-weight:700;color:#0b2447}
+ #pdfStage .pg table{width:100%;border-collapse:collapse;font-size:10pt;margin:6px 0 10px}
+ #pdfStage .pg th{background:#0b2447;color:#fff;text-align:left;padding:4px 6px}#pdfStage .pg td{border-bottom:1px solid #ccd3df;padding:4px 6px}
+ #pdfStage .pg .sec{font-size:12pt;font-weight:700;color:#fff;background:#19376d;padding:4px 8px;margin:12px 0 6px;break-after:avoid}
+ #pdfStage .pg .pq{border:1px solid #bcc6d6;border-radius:5px;padding:7px 9px;margin:0 0 7px;break-inside:avoid;page-break-inside:avoid}
+ #pdfStage .pg .pq .h{font-size:9.5pt;color:#444;margin-bottom:3px}
+ #pdfStage .pg .pq .q{font-weight:600;white-space:pre-line;line-height:1.45;margin-bottom:4px}
+ #pdfStage .pg .po{padding:2px 6px;margin:2px 0;border-radius:3px;white-space:pre-line;line-height:1.4;border:1px solid transparent}
+ #pdfStage .pg .po.ok{background:#dff5e6;border-color:#2e9e57}
+ #pdfStage .pg .po.bad{background:#fde4e1;border-color:#d23a2c}
+ #pdfStage .pg .po.pick{background:#dbe7ff;border-color:#1d4ed8}
+ #pdfStage .pg .tag{font-size:8.5pt;font-weight:700;margin-left:6px}
+ #pdfStage .pg .stt{display:inline-block;font-size:9pt;font-weight:700;border-radius:3px;padding:1px 7px;margin-left:6px}
+ #pdfStage .pg .stt.c{background:#14532d;color:#fff}#pdfStage .pg .stt.w{background:#b42318;color:#fff}#pdfStage .pg .stt.u{background:#555;color:#fff}
+ #pdfStage .pg .ex{font-size:9.5pt;background:#e3f6f7;padding:3px 6px;margin-top:3px;border-radius:3px}
+ #pdfStage .pg .foot{margin-top:12px;text-align:center;font-size:9pt;color:#444;border-top:1px solid #ccd3df;padding-top:6px}
+#pdfStage{position:fixed;left:-12000px;top:0;width:794px;background:#fff}
+#pdfStage .pg{width:794px;height:1123px;padding:38px 36px 0;background:#fff;color:#111;font-family:'Inter','Noto Sans Telugu',sans-serif;font-size:14px;position:relative;overflow:hidden}
+#pdfStage .pg .pfoot{display:block;position:absolute;left:36px;right:36px;bottom:14px;text-align:center;font-size:11px;color:#444;border-top:1px solid #ccd3df;padding-top:5px}
+#pdfStage .pg .pq{margin-bottom:9px}
+#pdfStage .pg .po{padding:3px 7px;margin:3px 0;border-radius:3px;white-space:pre-line;line-height:1.45;border:1px solid transparent}
+
+@media print{
+ @page{size:A4;margin:12mm 11mm 16mm}
+ body>*:not(#printArea){display:none!important}
+ html,body{background:#fff!important}
+ #printArea{display:block!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;color:#111;font-family:'Inter','Noto Sans Telugu',sans-serif}
+ .pfoot{display:block;position:fixed;bottom:0;left:0;right:0;text-align:center;font-size:8.5px;color:#333;border-top:1px solid #bbb;padding-top:2px}
+}
+
+/* ---- printable PDF report ---- */
+#printArea{display:none}
+@media print{
+ @page{size:A4;margin:14mm 12mm 16mm}
+ body>*:not(#printArea){display:none!important}
+ html,body{background:#fff!important}
+ body{padding:0!important;-webkit-user-select:text;user-select:text}
+ #printArea{display:block!important;color:#111;font-size:11.5pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ #printArea .ph1{border-bottom:3px solid #0e9aa7;padding-bottom:6px;margin-bottom:8px}
+ #printArea h1{margin:0;font-size:16pt;color:#0b2447}#printArea h2{margin:2px 0 0;font-size:10pt;color:#0e9aa7;letter-spacing:1px}
+ #printArea .meta{font-size:10.5pt;line-height:1.55;margin:6px 0}
+ #printArea .big{font-size:15pt;font-weight:700;color:#0b2447}
+ #printArea table{width:100%;border-collapse:collapse;font-size:10pt;margin:6px 0 10px}
+ #printArea th{background:#0b2447;color:#fff;text-align:left;padding:4px 6px}#printArea td{border-bottom:1px solid #ccd3df;padding:4px 6px}
+ #printArea .sec{font-size:12pt;font-weight:700;color:#fff;background:#19376d;padding:4px 8px;margin:12px 0 6px;break-after:avoid}
+ #printArea .pq{border:1px solid #bcc6d6;border-radius:5px;padding:7px 9px;margin:0 0 7px;break-inside:avoid;page-break-inside:avoid}
+ #printArea .pq .h{font-size:9.5pt;color:#444;margin-bottom:3px}
+ #printArea .pq .q{font-weight:600;white-space:pre-line;line-height:1.45;margin-bottom:4px}
+ #printArea .po{padding:2px 6px;margin:2px 0;border-radius:3px;white-space:pre-line;line-height:1.4;border:1px solid transparent}
+ #printArea .po.ok{background:#dff5e6;border-color:#2e9e57}
+ #printArea .po.bad{background:#fde4e1;border-color:#d23a2c}
+ #printArea .po.pick{background:#dbe7ff;border-color:#1d4ed8}
+ #printArea .tag{font-size:8.5pt;font-weight:700;margin-left:6px}
+ #printArea .stt{display:inline-block;font-size:9pt;font-weight:700;border-radius:3px;padding:1px 7px;margin-left:6px}
+ #printArea .stt.c{background:#14532d;color:#fff}#printArea .stt.w{background:#b42318;color:#fff}#printArea .stt.u{background:#555;color:#fff}
+ #printArea .ex{font-size:9.5pt;background:#e3f6f7;padding:3px 6px;margin-top:3px;border-radius:3px}
+ #printArea .foot{margin-top:12px;text-align:center;font-size:9pt;color:#444;border-top:1px solid #ccd3df;padding-top:6px}
+}
+</style>
+</head>
+<body class="noselect">
+
+<!-- ================= START ================= -->
+<div id="start" class="wrap">
+ <div class="hero"><h1 id="hTitle"></h1><h2>MATHEMATICS AND SCIENCES</h2><p>Test ID: <b id="hId"></b></p></div>
+ <div class="card" style="margin-top:12px">
+  <div class="facts"><div><b>150</b>Questions</div><div><b>150</b>Marks</div><div><b id="fDur">150</b>Minutes</div><div><b>No</b>Negative marking</div></div>
+  <div class="notice info" id="sched"></div>
+  <label for="nm">Candidate Name *</label>
+  <input type="text" id="nm" maxlength="40" placeholder="Enter your full name" autocomplete="off">
+  <label for="ds">District *</label>
+  <input type="text" id="ds" maxlength="30" placeholder="Enter your district" autocomplete="off">
+  <div class="err" id="serr"></div>
+  <button class="btn navy" style="width:100%;padding:14px;font-size:16px" id="go">Start Examination</button>
+  <button class="btn sec" style="width:100%;margin-top:10px" id="lbStart">Leaderboard</button>
+  <div class="instr"><b>Instructions</b><ul>
+   <li>CDP 30 • Telugu 30 • English 30 • Mathematics 20 • Physical Science 20 • Biological Science 20.</li>
+   <li>You may change an answer or use <b>Clear Response</b> at any time before final submission. Answers and the correct key are shown only after you submit.</li>
+   <li>Use <b>Mark for Review</b> to flag a question; it does not lock your answer.</li>
+   <li>The timer starts when you begin and continues if you refresh the page. The test submits automatically when time ends.</li>
+   <li>This test can be attempted <b>only once</b> per candidate.</li></ul></div>
+ </div>
+ <div class="credit"><b>C.RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT</b><br><a href="https://tenthquiz.blogspot.com" target="_blank" rel="noopener">https://tenthquiz.blogspot.com</a></div>
+</div>
+
+<!-- ================= EXAM ================= -->
+<div id="exam" class="hidden">
+ <div class="hdr">
+  <div class="hrow">
+   <div class="htitle"><b id="eTitle"></b><small id="eSub"></small></div>
+   <div class="who" id="eWho"></div>
+   <div class="timer" id="tbox"><small>TIME LEFT</small><b id="tm">--:--:--</b></div>
+   <button class="btn warn" id="subBtn">Submit Examination</button>
+  </div>
+  <div class="subs" id="subs"></div>
+ </div>
+ <div class="main">
+  <div class="card">
+   <div class="qhead"><div><b id="qno"></b> <span id="qsub"></span></div><div><span id="qmk">1 mark</span> <span class="badge hidden" id="qrev">★ Marked for review</span></div></div>
+   <div class="qtext" id="qt"></div>
+   <div id="opts"></div>
+   <div class="actions">
+    <button class="btn rev" id="mark">Mark for Review</button>
+    <button class="btn sec" id="clr">Clear Response</button>
+    <span class="sp"></span>
+    <button class="btn sec" id="prev">◀ Previous</button>
+    <button class="btn" id="next">Next ▶</button>
+   </div>
+  </div>
+  <div class="card pal" id="pal">
+   <h3>Question Palette</h3>
+   <div class="psum"><div><b id="cA">0</b>Answered</div><div><b id="cU">150</b>Not answered</div><div><b id="cR">0</b>Marked</div></div>
+   <div class="pscroll" id="pscroll"></div>
+   <div class="legend"><span><i class="a"></i>Answered</span><span><i></i>Not answered</span><span><i class="r"></i>Marked for review</span><span><i class="ar"></i>Answered + marked</span><span><i class="c"></i>Current question</span></div>
+   <button class="btn sec" style="width:100%;margin-top:12px;display:none" id="pclose">Close palette</button>
+  </div>
+ </div>
+ <div class="credit"><b>C.RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT</b><br><a href="https://tenthquiz.blogspot.com" target="_blank" rel="noopener">https://tenthquiz.blogspot.com</a></div>
+ <button class="pfab" id="pfab">Question Palette</button>
+</div>
+
+<!-- ================= RESULT ================= -->
+<div id="result" class="wrap hidden">
+ <div class="card res-top">
+  <div style="font-size:12.5px;color:var(--mut)">Examination submitted</div>
+  <h2 style="margin:4px 0" id="rName"></h2>
+  <div style="color:var(--mut);font-size:13px;line-height:1.6" id="rMeta"></div>
+  <div class="score-big"><span id="rScore"></span><span style="font-size:20px;font-weight:600"> / 150</span></div>
+  <div id="rPct" style="font-weight:600;color:var(--teal)"></div>
+  <div class="bd" id="rBd"></div>
+  <div id="rSend" class="notice info" style="margin-top:6px"></div>
+  <button class="btn sec hidden" id="retry" style="width:100%;margin-top:8px">Retry sending my score</button>
+  <button class="btn navy" id="pdfBtn" style="width:100%;padding:13px;margin-top:10px">Download PDF — questions, options, correct answers &amp; my responses</button>
+  <div style="font-size:11.5px;color:var(--mut);margin-top:4px">Saves a PDF file directly to your device.</div>
+  <button class="btn navy" id="certBtn" style="width:100%;padding:13px;margin-top:10px">Download Certificate of Appreciation</button>
+  <button class="btn sec" id="lbRes" style="width:100%;margin-top:8px">Leaderboard</button>
+  <table class="subt" id="rSub"></table>
+ </div>
+ <div class="card" style="margin-top:12px">
+  <div style="font-weight:700;color:var(--navy);font-size:16px">Answer key and your responses</div>
+  <div class="fl" id="fl"></div>
+  <div id="rv"></div>
+  <div class="credit"><b>C.RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT</b><br><a href="https://tenthquiz.blogspot.com" target="_blank" rel="noopener">https://tenthquiz.blogspot.com</a></div>
+ </div>
+</div>
+
+<!-- ================= MODALS ================= -->
+<div id="mConfirm" class="modal hidden"><div class="mbox"><h2>Submit examination?</h2>
+ <div style="font-size:13.5px;color:var(--mut)">You cannot change any answer after submitting.</div>
+ <table class="sumt"><tr><td>Answered</td><td id="sA"></td></tr><tr><td>Not answered</td><td id="sU"></td></tr><tr><td>Marked for review</td><td id="sR"></td></tr><tr><td>Answered and marked for review</td><td id="sAR"></td></tr></table>
+ <div class="mrow"><button class="btn sec" id="no">Continue test</button><button class="btn warn" id="yes">Yes, submit</button></div></div></div>
+<div id="mLB" class="modal hidden"><div class="mbox"><h2>Leaderboard</h2>
+ <div id="lbMe" style="font-weight:700;color:var(--navy);margin-bottom:6px;font-size:13.5px"></div>
+ <div style="max-height:50vh;overflow:auto"><table class="lb" id="lbT"></table></div>
+ <div style="font-size:11px;color:var(--mut);margin-top:6px" id="lbNote"></div>
+ <div class="mrow"><button class="btn sec" id="lbClose">Close</button></div></div></div>
+<div id="mMsg" class="modal hidden"><div class="mbox"><h2 id="mmT"></h2><div id="mmB" style="font-size:14px;line-height:1.6"></div><div class="mrow"><button class="btn navy" id="mmOk">OK</button></div></div></div>
+<div id="printArea" class="pr"></div>
+<div id="printArea"></div>
+<div id="pdfStage"></div>
+<canvas id="cv" class="hidden"></canvas>
+
+<script>
+/* =================================================================
+   EXAM CONFIGURATION  (change these for a future test)
+   ================================================================= */
+var CONFIG = {
+  TEST_ID:   "APTET-P2-FM09",                 // unique ID, saved in the Google Sheet (max 30 chars: letters, digits, - _)
+  TEST_NO:   "09",
+  START_AT:  "2026-10-04T00:00:00+05:30",               // exam opens (ISO time with +05:30 for IST). Empty = always open
+  END_AT:    "",                 // exam window closes. Empty = never closes
+  DURATION_MIN: 150,                       // personal timer in minutes (never extends past END_AT)
+  SCRIPT_URL: "__SCRIPT_URL__"             // paste your existing Google Apps Script Web App URL here
+};
+var CREDIT = "C.RASOOL BAVAJI, S.A.(P.S.), ZPHS, MADANAPALLE, ANNAMAYYA DISTRICT";
+var SITE = "https://tenthquiz.blogspot.com";
+var SUBJ = [
+ {n:'CDP',full:'Child Development & Pedagogy'},{n:'Telugu',full:'Telugu'},{n:'English',full:'English'},
+ {n:'Maths',full:'Mathematics'},{n:'Phy. Science',full:'Physical Science'},{n:'Bio. Science',full:'Biological Science'}
+];
+/* question data: s=subject index, q=question, o=4 options, a=index of correct option, e=explanation (if any) */
+var DATA = [{"s":0,"q":"Father of Experimental Psychology\nప్రయోగాత్మక మనోవిజ్ఞానశాస్త్ర పితామహుడు","o":["Skinner · స్కిన్నర్","Sigmund Freud · సిగ్మండ్ ఫ్రాయిడ్","Wilhelm Wundt · విల్ హెల్మ్ ఊంట్","Erikson · ఎరిక్సన్"],"a":2},{"s":0,"q":"This stage is called ‘Gang age’\n‘ముఠా వయస్సు’గా పిలువబడే దశ","o":["Infancy · శైశవ దశ","Early childhood · పూర్వ బాల్య దశ","Late childhood · ఉత్తర బాల్య దశ","Adolescence · కౌమార దశ"],"a":2},{"s":0,"q":"At this stage of Piaget’s Cognitive Development\nstages, We can observe the concepts like\nClassification, Analysis and Preservation\nపియాజె సంజ్ఞానాత్మక వికాస దశాలలోని ఈ దశలో మనం\nవర్గీకరణ, విశ్లేషణ, పదిలపరచుకోవడం వంటి భావనలను\nచూడగలం","o":["Sensory Motor Stage · జ్ఞానేంద్రియ చలన దశ","Pre – Operational Stage · పూర్వ ప్రచాలక దశ","Concrete -Operational Stage\nమూర్త ప్రచాలక దశ","Formal Operational Stage\nఅమూర్త ప్రచాలక దశ"],"a":2},{"s":0,"q":"The Psycho Social crisis faced by an individual at\nthe stage of young adulthood according to Erik\nErikson is\nఎరిక్ ఎరిక్సన్ ప్రకారం, పూర్వ వయోజన దశలోని వ్యక్తి\nఎదుర్కొనే మనో సాంఘిక క్లిష్ట పరిస్థితి","o":["Intimacy – Isolation · సన్నిహితం – ఏకాంతం","Generativity – Stagnation\nఉత్పాదకం – స్తబ్దత","Industry – Inferiority · శ్రమించడం – న్యూనత","Integrity – Despair · సమగ్రత – నిరాశ"],"a":0},{"s":0,"q":"A girl goes to school every day in time to get\ngood impression from her teacher. The girl\nbelongs to this level of Kohlberg‟s Moral\nDevelopment.\nఒక బాలిక, తన ఉపాద్యాయుని వద్ద మంచి గుర్తింపుకోసం,\nప్రతి రోజూ పాఠశాల సమయానికే వెళుతుంది. ఆ బాలిక కోల్\nబర్గ్ నైతిక వికాసంలో ఈ స్థాయిలో ఉంటుంది.","o":["Pre Conventional · పూర్వ సంప్రదాయ","Conventional · సంప్రదాయ","Post Conventional · ఉత్తర సంప్రదాయ","Non-Conventional · సంప్రదాయేతర"],"a":1},{"s":0,"q":"This is not a characteristic of a socially matured\nperson.\nసాంఘిక పరిపక్వత గల వ్యక్తి లక్షణం కానిది","o":["Shares social responsibilities\nసామాజిక భాధ్యతలను పంచుకొంటారు","Possess healthy self-concept\nఆరోగ్యకరమైన స్వీయ భావనను కలిగి ఉంటారు.","Participates in antisocial activities\nసంఘ వ్యతిరేక కార్యక్రమాలలో పాల్గొంటారు","Maintains emotional stability\nభావోద్వేగ స్థిరత్వం కలిగి వుంటారు"],"a":2},{"s":0,"q":"In this type of play children form groups and play\neach other by sharing toys.\nఈ రకం క్రీడలో పిల్లు\nజట్లుగా ఏర్పడి, బొమ్మలను యిచ్చి\nపుచ్చుకుంటూ ఆడుకుంటారు","o":["Solitary Play · ఏకాంత క్రీడ","Parallel Play · సమాంతర క్రీడ","Perpendicular Play · లంబ క్రీడ","Social Play · సాంఘిక క్రీడ"],"a":3},{"s":0,"q":"The power of abstract thinking is\nఅమూర్త ఆలోచనాశక్తియే","o":["Personality · మూర్తిమత్వం","Learning · అభ్యసనం","Attitude · వైఖరి","Intelligence · ప్రజ్ఞ"],"a":3},{"s":0,"q":"The multiple factor theory of Intelligence was\nproposed by\nబహుకారక ప్రజ్ఞా సిద్ధాంతమును ప్రతిపాదించినవారు","o":["Spearman · స్పియర్ మన్","L.L. Thorndike · ఎల్. ఎల్. థర్స్టన్","E.L. Thorndike · ఇ. ఎల్. థారన్డైక్","Howard Gardener · హావర్డ్ గార్డ్ నర్"],"a":2},{"s":0,"q":"The ability to introspect, analyse one‟s own\nstrengths and weakness and exhibit self –\nawareness is the characteristic of\nతన స్వంత బలాలు, బాలహీనతలను విశ్లేషించుకుని\nస్వయం అవగాహనను కలిగి ఉండటం ఈ ప్రజ్ఞ యొక్క\nలక్షణం","o":["Inter - Personal Intelligence\nవ్యక్తంతర ప్రజ్ఞ","Intra Personal Intelligence\nవ్యక్తి – అంతర్గత ప్రజ్ఞ","Naturalistic Intelligence\nప్రకృతి సంబంధిత ప్రజ్ఞ","Linguistic Intelligence · భాషా ప్రజ్ఞ"],"a":1},{"s":0,"q":"DAT (Differential Aptitude Test) is useful to\nmeasure\nడీఫరెన్షియల్ ఆప్టిట్యూడ్ పరీక్ష దీనిని మాపనం\nచేయడానికి ఉపయోగపడుతుంది.","o":["Personality · మూర్తిమత్వం","Intelligence · ప్రజ్ఞ","Attention · అవధానం","Aptitude · సహజ సామర్థ్యం"],"a":3},{"s":0,"q":"The tendency to perceive objects that are close to\none another is\nఒకదానికొకటి దగ్గరగా ఉన్న అంశాలను ఒక సమూహంగా\nచూడగలగడమే","o":["Law of Continuity · అవిరళ నియమము","Law of Similarity · సామ్య నియమము","Law of Proximity · సామీప్య నియమము","Law of Figure – Ground relationship\nఆకృతి – క్షేత్ర నియమం"],"a":2},{"s":0,"q":"According to R.B.Cattell‟s theory, the number of\nsource traits in personality are\nR.B. కాటిల్ సిద్ధాంతం ప్రకారం, మూర్తిమత్వంలో మూల\nలక్షణాంశాల సంఖ్య","o":["11","12","14","16"],"a":3},{"s":0,"q":"It is partly conscious but not entirely\nఇది పాక్షికంగా చేతనంలో వుంటుంది కానీ పూర్తిగా కాదు","o":["Id · అచిత్తు","Ego · అహం","Super Ego · అధ్యహం","Libido · కామేచ్ఛ"],"a":1},{"s":0,"q":"According to Freud‟s Structure of Personality,\n“Smoking is injurious to Health” is suggested by\nఫ్రాయిడ్ మూర్తిమత్వ నిర్మితి సిద్ధాంతం ప్రకారం\n“ధూమపానం ఆరోగ్యానికి హానికరం” అని సూచించేది","o":["Id · అచిత్తు","Ego · అహం","Super Ego · అధ్యహం","Libido · కామేచ్ఛ"],"a":1},{"s":0,"q":"In Sociometry, a person who is liked by the most\npeople is\nసాంఘికమితిలోఎక్కువ మంది ఇష్టపడే వ్యక్తి","o":["Isolate · ఏకాకి","Star · తార","God · దేవుడు","Object · వస్తువు"],"a":1},{"s":0,"q":"This is not a theory of Transfer of Learning\nఅభ్యసన బదలాయింపు సిద్ధాంతం కానిది","o":["Theory of Generalization\nసాధారణీకరణ సిద్ధాంతం","Transposition Theory · సమగ్రాకృతి సిద్ధాంతం","Theory of Ideals · ఆదర్శాల సిద్ధాంతం","Theory of Classical Conditioning\nసంప్రదాయ నిబంధన సిద్ధాంతం"],"a":3},{"s":0,"q":"The mismatched theory and its proponent is\nతప్పుగా జతచేయబడ్డ సిద్దాంతము మరియు దాని\nప్రతిపాదకులు","o":["Theory of Identical Elements - Thorndike\nసమరూప అంశాల సిద్ధాంతం - థారన్ డైక్","Theory of Ideals - Bagley\nఆదర్శాల సిద్ధాంతం - బాగ్లే","Theory of Formal Discipline - Skinner\nనియత క్రమశిక్షణా సిద్ధాంతం - స్కిన్నర్","Theory of Generalization - Charles Judd\nసాధారణీకరణ సిద్ధాంతం- చార్లెస్ జడ్"],"a":2},{"s":0,"q":"Ivan Pavlov conducted experiments on\nఇవాన్ పావ్ లోవ్ ప్రయోగాలను దీనిపై నిర్వహించారు","o":["Dog · కుక్క","Rat · ఎలుక","Cat · పిల్లి","Chimpanzee · చింపాంజీ"],"a":0},{"s":0,"q":"According to Maslow, House is a\nమాస్లో ప్రకారం, ఇల్లు అనేది","o":["Physiological Need · శారీరక అవసరం","Safety Need · భద్రత అవసరం","Esteem Need · గౌరవ అవసరం","Love and Belonging Need\nప్రేమ సంబంధిత అవసరం"],"a":1},{"s":0,"q":"A child watches carefully while his teacher is\nsolving a problem. Later he solves similar\nproblems. The type of learning here is\nఒక ఉపాధ్యాయుడు సమస్యను పరిష్కరిస్తున్నప్పుడు, ఒక\nపిల్లవాడు జాగ్రత్తగా గమనించి తరువాత అలాంటి\nసమస్యలను సాధించాడు. ఇక్కడి అభ్యసన రకం","o":["Observation Learning · పరిశీలనా అభ్యసనం","Classical Conditioning\nసంప్రదాయ నిబంధనం","Trial and Error · యత్న దోషం","Operant Conditioning · కార్యసాధక నిబంధనం"],"a":0},{"s":0,"q":"Bruner‟s approach gives importance to\nబ్రూనర్ వాదం దీనికి ప్రాధాన్యతనిస్తుంది","o":["Self Learning · స్వీయ అభ్యసనం","Teacher centered · ఉపాధ్యాయ కేంద్రీకృతం","Lecture Method · ఉపన్యాస పద్ధతి","Rote Learning · బట్టీ అభ్యసనం"],"a":0},{"s":0,"q":"In Bruner‟s Theory of Instruction, the teacher\nmainly acts as\nబ్రూనర్ శిక్షణా సిద్ధాంతంలో ఉపాద్యాయుడు ముఖ్యంగా\nఇలా వ్యవహరించాలి","o":["Dictator · నియంత","Monitor · పర్యవేక్షకుడు","Lecturer · ఉపన్యాసకుడు","Examiner · పరీక్షకుడు"],"a":1},{"s":0,"q":"Effective classroom\nప్రభావవంతమైన తరగతి గది","o":["Not safe and secure\nభద్రత మరియు రక్షణ లేనిది","Support the student‟s needs\nవిద్యార్ధుల అవసరాలకు సహాయ పడేది","Rigid in the rules · నియమాలలో దృఢమైనది","Lack of proper lighting facilities\nసరైన కాంతి సౌకర్యం లేనిది"],"a":1},{"s":0,"q":"Guidance given to select a suitable career is\nసరైన ఉద్యోగాన్ని ఎంపిక చేసుకోవడానికి ఇచ్చే\nమార్గదర్శకత్వం","o":["Educational guidance\nవిద్యావిషయక మార్గదర్శకత్వం","Vocational guidance · ఔద్యోగిక మార్గదర్శకత్వం","Personal guidance · వ్యక్తిగత మార్గదర్శకత్వం","Marital guidance · వైవాహిక మార్గదర్శకత్వం"],"a":1},{"s":0,"q":"This belongs to Print Media\nముద్రణా మద్యమమునకు సంబంధించినది","o":["Radio · రేడియో","Television · టెలివిజన్","Cinema · సినిమా","News Paper · వార్తా పత్రిక"],"a":3},{"s":0,"q":"This is not a characteristic of computers\nకంప్యూటర్ లక్షణం కానిది","o":["Speed · వేగం","Accuracy · ఖచ్ఛితత్వం","Forgetting · విస్మృతి","Reliability · విశ్వసనీయత"],"a":2},{"s":0,"q":"Logarithms were invented by\nలాగరిథమ్స్ ను కనుగొన్నవారు","o":["Pascal · పాస్కల్","Napier · నేపియర్","Leibniz · లైబ్నిజ్","Babbage · బాబేజ్"],"a":1},{"s":0,"q":"Shortcut key useful to open a new blank\ndocument\nఖాళీగా ఉండే కొత్త డాక్యుమెంట్ను తెరుచుటకు\nఉపయోగించే షార్ట్ కట్ కీ","o":["Ctrl + A","Ctrl + B","Ctrl + C","Ctrl + N"],"a":3},{"s":0,"q":"Full form of CPU\nCPU పూర్తి రూపం","o":["Computer Parts Unity","Central Processing Unit","Code Processing Unit","Compact Parts Units"],"a":1},{"s":1,"q":"చేతులకు దొడవు దానము\nభూతల నాథులకు దొడవు బొంకమి ధరలో\nనీతియు తొడవెవ్వారికి\nనాతికి మానంబు తొడవు నయముగ సుమతీ!\nపై పద్యం ఆధారంగా చేతులకు అలంకారము","o":["కార్యము","దానము","కంకణము","ఉంగరము"],"a":1},{"s":1,"q":"ద్వారబంధమునకు దలుపులు గడియలు\nవలెనె నోటికొప్పుగల నియతులు\nధర్మమెఱిఁగి పలుక ధన్యుడౌ భువిలోన\nవిశ్వదాభిరామ వినురవేమ!\nలోకంలో దీన్ని గ్రహించి మాట్లాడితే ధన్యుడవుతాడు","o":["ధర్మము","నియమం","భాష","వినయం"],"a":0},{"s":1,"q":"తాను భుజింపని యర్థము\nమానవపతి జేరు గొంత మణి భూగతమౌ\nగానల నీగల గూర్చిన\nదేనియ యొరు జేరునట్లు తిరముగ సుమతీ!\nతేనెటీగలతో పోల్చినది","o":["పరులు","సోదరులు","లోభి","సుతులు"],"a":2},{"s":1,"q":"శతకపద్యాలలో మకుటం ప్రధానమైనది. ఈ పద్యాల్లో ప్రతి పద్యం చివర మకుటం ఉంటుంది. ఇవి ముక్తకాలు, అంటే ఏ పద్యానికదే స్వతంత్ర భావంతో ఉంటుంది. మల్లభూపాలీయం, చిత్తశతకం, తరిగొండ నృసింహశతకం, భక్తచింతామణి శతకం, విశ్వనాథేశ్వర శతకం మొదలైనవి తెలుగు సాహిత్యంలో కోకొల్లలుగా ఉన్నాయి. శతకపద్యాలు","o":["ముక్తియాలు","ముక్తకాలు","ముక్తజాలు","ముక్తవాలు"],"a":1},{"s":1,"q":"‘జీవని’ పాఠం రచయిత","o":["ప్రతాప కుమార్","వి. చంద్రశేఖరరావు","ఎస్. గంగప్ప","శీలా వీర్రాజు"],"a":1},{"s":1,"q":"“ఆంధ్రవైభవం” పాఠం కవి","o":["దేవీ ప్రియ","నేతల ప్రతాప్ కుమార్","కొండేపూడి లక్ష్మీ నారాయణ","రావినూతల ప్రేమకిషోర్"],"a":2},{"s":1,"q":"‘తెలుగుపూలు’ శతకకర్త","o":["నార్ల చిరంజీవి","కరుణశ్రీ","వేమన","మారద వెంకయ్య"],"a":0},{"s":1,"q":"‘కుప్పుసామి శతకం’ రచించినవారు","o":["త్రిపురనేని రామస్వామి","ఏనుగు లక్ష్మ ణ కవి","మారద వెంకయ్య","ధూర్జటి"],"a":0},{"s":1,"q":"వ్యాసం ప్రధాన లక్షణం కానిది","o":["కథనము","ముగింపు","ఉపోద్ఘాతం","విషయ విస్తరణ"],"a":0},{"s":1,"q":"దేశ అభివృద్ధిలో శ్రమజీవుల పాత్ర కీలకమైనది వారి కష్టాన్ని\nగుర్తిం చి,\nవారి శ్రమను గౌరవించాలనే ఉద్దేశం కలిగిన పాఠం","o":["మాతృభూమి","చిరమాలిన్యం","సందేశం","పయనం"],"a":2},{"s":1,"q":"‘జీవని’ పాఠంలో జీవని తల్లి","o":["లలిత","సరళ","శారద","బాల"],"a":0},{"s":1,"q":"కన్యాశుల్కం నాటకంలో ‘తాంబూలం యిచ్చేశాను యిహ\nతన్నుక\nచావండి’ అని పలికిన పాత్ర","o":["కరటక శాస్త్రి","గిరీశం","అగ్నిహోత్రావధాన్లు","బుచ్చమ్మ"],"a":2},{"s":1,"q":"కింది వాటిలో నవరత్నాలలో చేరనిది","o":["వజ్రం","బంగారం","ముత్యం","మరకతం"],"a":1},{"s":1,"q":"“ఎంతైనా పంతులమ్మగారి బుజ్జోణ్ణి” ఈ మాటలు ఈ సందర్భం లోనివి","o":["కవి తన హోదా గురించి చెప్పిన సందర్భం","కవి తన అన్నప్రాశన గురించి చెప్పిన సందర్భం","కవి తన నిద్రాభంగం గురించి చెప్పిన సందర్భం","కవి అక్షరాలతో తన అనుబంధం గురించి చెప్పిన సందర్భం"],"a":3},{"s":1,"q":"మాతృభూమి పాఠంలో “నా బిడ్డ బతికిన నాలుగురోజులు మన ఋణం తీర్చుకోవడమే కాదు, దేశ సేవలో మరణించి జనుల గుండెల్లో నిలిచి పోయాడు” అని వీరు వీరితో అన్నారు","o":["వీర - చంద్రమ్మతో","సుధీర్ - పద్మతో","చంద్రమ్మ - రోశయ్యతో","పద్మ - రాజారావుతో"],"a":2},{"s":1,"q":"పర్యాయపదాలను జతపరచండి\n1) ఈప్సితము a. వాన, వృష్టి\n2)పథం b. త్రోవ, దారి\n3) వర్షం c. కోరిక, ఆకాంక్ష","o":["1 – a 2 – b 3 - c","1 – a 2 – c 3 - b","1 – c 2 – a 3 - b","1 – c 2 – b 3 - a"],"a":3},{"s":1,"q":"నానార్థాలను జతపరచండి\n1. ముని, తగినది a. పిశాచం\n2. ప్రేతం, పిల్లి b. సాధువు\n3. సమూహం, నిధి c. నికరం","o":["1 – a 2 – b 3 - c","1 – b 2 – c 3 - a","1 – c 2 – a 3 - b","1 – b 2 –a 3 - c"],"a":3},{"s":1,"q":"ధర్మాన్ని ఆచరించేవాడు అనే వ్యుత్పత్త్య ర్థం కలిగినది","o":["ధార్మికుడు","దాశరథి","అతిథి","భాస్కరుడు"],"a":0},{"s":1,"q":"‘త్యాగం’ పదానికి వికృతి","o":["చాగం","సుగము","గుణము","గొనము"],"a":0},{"s":1,"q":"సీతారామ శాస్త్రిగారు తమ శిష్యులందరిలో నాకే\nఅగ్రతాంబూలం\nఇచ్చారు. ఈ వాక్యంలోని జాతీయం","o":["అగ్రతాంబూలం","సీతారామశాస్త్రి గారు","శిష్యులందరిలో","ఈ వాక్యంలో జాతీయం లేదు"],"a":0},{"s":1,"q":"ఆకలి రుచి ఎరుగదు, నిద్ర సుఖం ఎరుగదు అనేది ఒక","o":["జాతీయం","పొడుపు కథ","సామెత","ధాతువు"],"a":2},{"s":1,"q":"సామెతలను గుర్తిం చండి\na. ఏ పాటు తప్పినా సాపాటు తప్పదు\nb. కుక్క కాటుకు చెప్పుదెబ్బ\nc. గుర్రం గుడ్డిదైనా దాణా తప్పదు","o":["a, b · సరైనవి","b, c · సరైనవి","a, c · సరైనవ","a, b, c · సరైనవి"],"a":3},{"s":1,"q":"చేప అనే విడుపుకు చెందిన పొడుపు కథ","o":["జీవికి పుట్టిం ది కానీ చలనం లేదు","నిద్రలో కూడా కన్నులు మూయనిది","ఊరంతటికి ఒకే దుప్పటి","ఇంట్లో కలి, ఒంట్లో కలి"],"a":1},{"s":1,"q":"ఆమ్రేడితం కలిగిన పదాన్ని గుర్తిం చండి","o":["అచ్చోట","కోట్టినన్","అప్పడప్పుడు","అత్యంత"],"a":2},{"s":1,"q":"పుస్తకాలు పదాన్ని విడదీసినరూపం","o":["పుస్త + కాలు","పుస్తక + లు","పుస్తక + ఆలు","పుస్తకము + లు"],"a":3},{"s":1,"q":"‘పదింతలు’ ఈ సంధి పదం","o":["అత్వసంధి","ఉత్వసంధి","గుణసంధి","ఇత్వసంధి"],"a":3},{"s":1,"q":"మ, స, జ, స, త, త, గ, గణాలు ఈ పద్యపాదంలో\nఉంటాయి","o":["చంపకమాల","మత్తేభం","ఉత్పలమాల","శార్దూలం"],"a":3},{"s":1,"q":"‘మధురఫలంబులిచ్చు వృక్షం బు వృక్షం బు.’ ఈ వాక్యంలోని\nఅలంకారం","o":["వృత్త్య నుప్రాసాలంకారం","యమకాలంకారం","లాటానుప్రాసాలంకారం","ఉపమాలంకారం"],"a":1},{"s":1,"q":"‘ఒక వస్తువును ప్రసిద్ధమైన మరొక వస్తువుతో పోల్చి\nరమ్యంగా చెబితే\nఅది’","o":["రూపకాలంకారం","అతిశయోక్తి అలంకారం","శ్లేషాలంకారం","ఉపమాలంకారం"],"a":3},{"s":1,"q":"తామంతా నిత్యం పుస్తకాలు చదువుతామని పిల్లలు\nచెప్పారు. ఈ\nపరోక్ష కథనాన్ని ప్రత్యక్షకథనంలోకి మార్చి రాయండి","o":["“తామంతా నిత్యం పుస్తకాలు చదువుతాము” అని పిల్లలు చెప్పారు.","“మేమంతా నిత్యం పుస్తకాలు చదువుతాము” అని పిల్లలు చెప్పారు.","మేమంతా నిత్యం పుస్తకాలు చదువుతాము అని పిల్లలు చెప్పారు.","తామంతా నిత్యం పుస్తకాలు చదవము అని పిల్లలు చెప్పారు."],"a":1},{"s":2,"q":"The king was very happy. Choose the antonym of the word „happy‟.","o":["cheerful","sad","joyful","merry"],"a":1},{"s":2,"q":"I haven‟t been brave. Choose the antonym of the word „brave‟.","o":["valiant","cowardly","valorous","heroic"],"a":1},{"s":2,"q":"Choose the correctly spelt word.","o":["cowncil","counsil","council","cownsil"],"a":2},{"s":2,"q":"A person who carries people‟s luggage at a railway station.","o":["porter","potter","pilot","purser"],"a":0},{"s":2,"q":"A person who knows many languages","o":["grammarian","bilingual","fatalist","polyglot"],"a":3},{"s":2,"q":"Choose the correct idiomatic expression.","o":["bite the ant","bite the bullet","bite the cap","bite the carpet"],"a":1},{"s":2,"q":"The police set up road blocks on routes out of the city. Choose the correct meaning of the underlined phrase„set up‟.","o":["built","removed","rejected","reduced"],"a":0},{"s":2,"q":"Please ____ our apologies. Choose the correct option","o":["except.","expect","excempt","accept"],"a":3},{"s":2,"q":"Identify the stem of the word „hopefully‟.","o":["hope","hopeful","ful","fully"],"a":1},{"s":2,"q":"Can I give you a friendly ____ of advice? Choose the option that collocates the best.","o":["bunch","slice","part","word"],"a":3},{"s":2,"q":"I go to school regularly. Identify the part of the speech of the word „regularly‟.","o":["Adjective","Verb","Adverb","Pronoun"],"a":2},{"s":2,"q":"I want to live in a palace. Identify the parts of the speech of the words „want‟, „palace‟.","o":["Noun, Pronoun","Verb, Noun","Adverb, Noun","Noun, Verb"],"a":1},{"s":2,"q":"My neighbour is ____ photographer. Choose the option that fits the blank.","o":["a","an","the","No article"],"a":0},{"s":2,"q":"Vamsi took some pictures. Choose the correct Passive Voice.","o":["Some pictures were taken by Vamsi.","Some pictures are taken by Vamsi.","Some pictures have taken by Vamsi.","Some pictures had taken by Vamsi."],"a":0},{"s":2,"q":"Direct: Ramya said to uncle, “What is the price”? Indirect: Ramya asked uncle what the price ___. Choose the correct option that fits in the blank.","o":["is","were","could","was"],"a":3},{"s":2,"q":"What are the facilities provided in the school? Identify the type of sentence.","o":["Declarative","Interrogative","Imperative","Exclamatory"],"a":1},{"s":2,"q":"It has not rained well this year. ______ the seeds they bought were fake. Choose the correct linker.","o":["But","Thus","Consequently","In addition to that"],"a":3},{"s":2,"q":"The train may arrive late tomorrow. Identify the language function in the above sentence.","o":["Offer","Past habit","Possibility","Request"],"a":2},{"s":2,"q":"Choose the sentence that has the correct agreement of the verb with the subject.","o":["He and I am Playing.","He and I was Playing.","He and I were Playing.","He and I is Playing."],"a":2},{"s":2,"q":"Q: Is it dark now? Ans: Yes, it _____. Choose the correct option that fits the blank.","o":["am","is","are","were"],"a":1},{"s":2,"q":"Choose the expression in which the adjectives are in their correct order.","o":["The Japanese industrial designers","The industrial Japanese designers","Japanese the industrial designers","Industrial the Japanese designers"],"a":0},{"s":2,"q":"Sravani will join the research team, ____ Choose the correct question tag that fits in the blank.","o":["isn‟t she?","will she?","won‟t she?","wasn‟t she?"],"a":2},{"s":2,"q":"Come when you like. Identify the type of clause in the above sentence.","o":["Noun clause","Adverb clause","Adjective clause","Non- finite clause"],"a":1},{"s":2,"q":"Identify the correctly punctuated sentence.","o":["This shop sells children books","This shop sells children‟s books.","This shop sells children book‟s?","This shop sells childrens‟ books."],"a":1},{"s":2,"q":"Identify the word that comes first in the alphabetical order.","o":["joke","jolly","joint","joker"],"a":2},{"s":2,"q":"Identify the silent letter from the word „debt‟.","o":["d","e","b","t"],"a":2},{"s":2,"q":"Read the following. One day, a strange thing happened. Abhiram, a fisherman caught a big golden fish in his net. When he took the fish out of water, the fish began to speak. Now answer the following. The strange thing in the above passage refers to ____.","o":["catching a golden sea-shell","catching a silver fish","catching Abhiram","the golden fish speaking"],"a":3},{"s":2,"q":"Read the following. Once there was a poor farmer who had a goose. Suddenly, the goose started laying a golden egg every day, and soon, the farmer become very rich. Now answer the following. How did the farmer have good fortune?","o":["He had a lot of eggs","He sold his goose","His goose laid golden eggs","He sold his farm"],"a":2},{"s":2,"q":"Read the following. In Delhi, a balloon race is held every year. A large number of huge and colourful balloons float in the air above the houses and tall buildings, with people standing in the baskets or gondolas, as are called, looking down upon us. Answer the following. How often does the balloon race held in Delhi?","o":["once every year","twice a year","once every three months","once every two years"],"a":0},{"s":2,"q":"Read the following. How can the bird that is born for joy, Sit in the cage and sing, How can a child when fears annoy, But drop his tender wing, And forget his youthful spring . Answer the following. In the poem, a child is compared to___","o":["a free bird","a joyful bird","a caged bird","a singing bird"],"a":2},{"s":3,"q":"LCM of 20, 25 and 30 is\n20, 25 మరియు 30 ల క. సా. గు","o":["240","120","150","300"],"a":3,"e":"LCM(20,25,30): 20=2²×5, 25=5², 30=2×3×5 → LCM = 2²×3×5² = 300."},{"s":3,"q":"How many consecutive odd positive integers added to get 144\nఎన్ని వరుస ధన బేసి పూర్ణ సంఖ్యల మొత్తము 144 అగును","o":["8","10","12","14"],"a":2,"e":"Sum of first n odd numbers = n². n² = 144 → n = 12."},{"s":3,"q":"[(3.2)³ + (1.8)³] / [(3.2)² − 5.76 + (1.8)²] =","o":["5","5.2","5.1","6"],"a":0,"e":"Using a³+b³ = (a+b)(a²−ab+b²) with a=3.2, b=1.8 and ab=5.76: the denominator equals a²−ab+b², so the expression simplifies to a+b = 3.2+1.8 = 5."},{"s":3,"q":"The ratio of 90cm to 1.5m is\n90 సెం.మీ కు 1.5 మీ కు గల నిష్పత్తి","o":["5:3","6:1","3:5","1:6"],"a":2,"e":"90 cm : 1.5 m = 90 cm : 150 cm = 3:5."},{"s":3,"q":"The angle between the two perpendicular lines is\nరెండు లంబ రేఖల మధ్య కోణం","o":["0°","90°","180°","45°"],"a":1,"e":"Perpendicular lines meet at a right angle, i.e. 90°."},{"s":3,"q":"The longest chord in a circle is\nఒక వృత్తంలో అతి పెద్ద (పొడవైన) జ్యా","o":["Diameter · వ్యాసం","Radius · వ్యాసార్థం","Chord · జ్యా","Arc · చాపం"],"a":0,"e":"The diameter passes through the centre and is the longest possible chord."},{"s":3,"q":"If the mean of 2, 3, 4, 5, x is 5 then value of x is\n2, 3, 4, 5, x ల యొక్క సగటు 5 అయిన x విలువ","o":["3","11","5","6"],"a":1,"e":"Mean = (2+3+4+5+x)/5 = 5 → 14+x = 25 → x = 11."},{"s":3,"q":"Median of x/4, x, x/5, x/3, x/2 is 5 then value of x\nx/4,x, x/5, x/3, x/2 ల మధ్యగతం 5 అయిన x విలువ","o":["5","10","15","20"],"a":2,"e":"Order the 5 terms by size (for positive x): x/5 < x/4 < x/3 < x/2 < x. The middle (median) term is x/3. Set x/3 = 5 → x = 15."},{"s":3,"q":"The zero of the polynomial P(x)= 2x + 1 is\nP(x)= 2x + 1 యొక్క శూన్య విలువ","o":["1/2","1","−1/2","0"],"a":2,"e":"Set P(x)=0: 2x+1=0 → x = −1/2."},{"s":3,"q":"The 2nd term from the end of the AP:\n3,8,13,……,253\n3,8,13,……,253 అంకశ్రేడి యొక్క చివరి నుండి 2వ పదము","o":["162","160","248","174"],"a":2,"e":"AP: 3,8,13,...,253 with d=5. Last term=253, so 2nd-from-end = 253−5 = 248."},{"s":3,"q":"The diagonal of a quadrilateral shapes field is 24m and the perpendiculars dropped on it from the remaining opposite vertices are 8m and 13m. The area of the field is (in m²)\nఒక మైదానం చతుర్భుజ ఆకారం లో ఉంది దాని కర్ణము 24 మీ మరియు దానికి ఎదుట శీర్షాలు నుండి గీసిన లంబముల పొడవులు వరుసగా 8 మీ మరియు 13 మీ. ఆ మైదానం వైశాల్యం (మీ² లలో)","o":["152","252","150","250"],"a":1,"e":"Area = ½×diagonal×(sum of the two perpendiculars) = ½×24×(8+13) = ½×24×21 = 252 m²."},{"s":3,"q":"Total surface area of a cuboid is\nదీర్ఘ ఘనం యొక్క సంపూర్ణతల వైశాల్యం","o":["2(lh + bh)","2(lh + bl)","2(lh + bh + lb)","(lh + bh + lb)"],"a":2,"e":"The standard formula for total surface area of a cuboid is 2(lb + bh + hl)."},{"s":3,"q":"The amount of water displaced by a solid spherical ball of diameter 0.21m (in liters)\n0.21 మీ వ్యాసం కలిగిన ఘనగోళాకారం బంతి ద్వారా స్థాన భ్రంశం చెందిన నీటి పరిమాణం (లీ. లలో)","o":["4.851","48.51","485.1","4851"],"a":0,"e":"r=0.105m. Volume = (4/3)πr³ = (4/3)×(22/7)×0.105³ ≈ 0.004851 m³ = 4.851 litres."},{"s":3,"q":"The probability of drawing a white marble\nrandomly from a certain box contains 5 red\nmarbles, 8 white marbles and 4 green marbles.\n5 ఎర్రని, 8 తెల్లని మరియు 4 ఆకుపచ్చ గోళీలు గల ఒక పెట్టె\nనుండి యాదృచ్ఛికంగా ఒక తెల్లని గోళిని తీయు సంభావ్యత","o":["5/17","4/17","9/17","8/17"],"a":3,"e":"Total marbles = 5+8+4 = 17. P(white) = 8/17."},{"s":3,"q":"The distance between the points (0, 0) and (7, 4) is (in units)\n(0, 0), (7, 4) బిందువుల మధ్య దూరము ( యూనిట్లలో)","o":["7","4","√65","√89"],"a":2,"e":"Distance = √(7²+4²) = √(49+16) = √65."},{"s":3,"q":"Author of the book “Elements”\n“ఎలిమెంట్స్” గ్రంధ రచయిత","o":["Pythagoras · పైథాగరస్","Thales · థేల్స్","Rene Descarte · రెనెడెకార్టె","Euclid · యూక్లిడ్"],"a":3,"e":"Euclid is the author of the book \"Elements\"."},{"s":3,"q":"Who said that “Education is life”\n“విద్యయే జీవితం” అని చెప్పినవారు","o":["Young · యంగ్","Kilpatric · కిల్ పాట్రిక్","John Dewey · జాన్ డ్యూయి","Stevenson · స్టీవెన్సన్"],"a":2,"e":"John Dewey said \"Education is life\"."},{"s":3,"q":"This is the convenient method to derive formula\nfor compound interest is\nచక్రవడ్డీ సూత్రాన్ని రాబట్టా\nనికి అనువైన బోధన పద్దతి","o":["Inductive method · అగమన పద్దతి","Deductive method · నిగమన పద్దతి","Analytic method · విశ్లేషణ పద్దతి","Synthetic method · సంశ్లేషణ పద్దతి"],"a":0,"e":"The Inductive method is the convenient way to derive the formula for compound interest, by building up from specific examples."},{"s":3,"q":"“A problem corner can be started by the maths\nclub, with suitable puzzles and mathematical\nproblems at all levels”. This recommendation is\nmade by\n“అన్నీ స్థాయిలకు ఉపయుక్తమైన పజిల్స్, గణిత\nసమస్యలలో సమస్య కార్నర్ ను గణిత క్లబ్\nప్రారంభించవచ్చు “. అని సిఫారసు చేసినది","o":["NPE – 1986","POA – 1992","NEP – 2020","APSCF – 2011"],"a":3,"e":"APSCF–2011 recommended starting a 'problem corner' through the maths club with puzzles and problems for all levels."},{"s":3,"q":"The evaluation tool that reflect a student’s\npersonality is\nఒక విద్యార్ధి యొక్క వ్యక్తిత్వం ప్రతి బింబించే మూల్యాంకనా\nసాధనము","o":["Check list · చెక్ లిస్టు","Rating scale · రేటింగు స్కేలు","Anecdotal record · ఏనక్డోటల్ రికార్డు","Questionnaire · ప్రశ్నావళి"],"a":2,"e":"The Anecdotal record is the evaluation tool that best reflects a student's personality through narrative observations."},{"s":4,"q":"The force exerted by a charged body on another charged body is known as\nఒక ఆవేశ పూరిత వస్తు వు మరొక ఆవేశ పూరిత వస్తు వుపై కలుగ జేసే బలాన్ని ఇలా పిలుస్తా రు.","o":["Muscular force · కండర బలం","Frictional force · ఘర్ష ణ బలం","Electrostatic force · స్థా వర విద్యుత్ బలం","Magnetic force · అయస్కాంత బలం"],"a":2},{"s":4,"q":"A: Mass of the body does not change from place to place\nB: Weight of the body changes from place to place\nA: వస్తు వు యొక్క ద్ర వ్యరాశి ప్ర దేశాన్ని బట్టి మారదు\nB: వస్తు వు భారం ఒక ప్ర దేశం నుండి మరో ప్ర దేశానికి మారుతుంది","o":["Both A and B are correct A మరియు B లు రెండూ సరైనవి","Both A and B are incorrect A మరియు B లు రెండూ సరికావు","A is correct, B is incorrect A సరైనది, B సరికాదు","A is incorrect, B is correct A సరికాదు, B సరైనది"],"a":0},{"s":4,"q":"Water stored in the reservoir at a certain height has this energy\nరిజర్వాయర్ నందు కొంత ఎత్తు లో నిల్వ చేయబడిన నీటికి ఈ శక్తి ఉంటుంది","o":["Potential energy · స్థి తి శక్తి","Kinetic energy · గతి శక్తి","Both potential and kinetic energies స్థి తి మరియు గతి శక్తు లు రెండూ","Neither potential nor kinetic energies స్థి తిశక్తి గాని గతిశక్తి గాని ఉండవు"],"a":0},{"s":4,"q":"The repeated reflection that results in the persistence of sound is calle\nపలు మార్లు పరావర్త నం కారణంగా సాగదీయబడిన ధ్వనిని ఈ విధంగా పిలుస్తా రు","o":["Echo · ప్ర తిధ్వని","Multiple reflections · బహుళ పరావర్త నాలు","Reverberation · ప్ర తినాదం","Frequency · పౌనఃపున్యం"],"a":2},{"s":4,"q":"If an object is placed at centre of curvature in front of a concave mirror then the characteristics of image\nఒక పుటాకార దర్పణం ముందు దాని వక్ర త కేంద్రం వద్ద వస్తు వును ఉంచినప్పుడు ప్ర తిబింబ లక్ష ణాలు","o":["Real, inverted and diminished నిజ, తలక్రిందులు మరియు క్ష యీకృత","Real, inverted and magnified నిజ, తలక్రిందులు మరియు వృద్దీ కృత","Real, inverted and same size నిజ, తలక్రిందులు మరియు సమాన పరిమాణం","Virtual, erect and same size మిధ్యా, నిటారు మరియు సమాన పరిమాణం"],"a":2},{"s":4,"q":"The change in the focal length of the eye lens is caused by the action of\nదీని వలన కంటి కటకం యొక్క నాబ్యాంతరం మారుతుంది","o":["Pupil · తారక","Retina · రెటీనా","Ciliary muscles · సిలియరీ కండరాలు","Iris · కనుపాప"],"a":2},{"s":4,"q":"If the area of the cross section of the wire increases by 2 times, then the resistance increases by\nతీగ మధ్యచ్ఛేదన వైశాల్యాన్ని 2 రెట్లు పెంచినపుడు దాని నిరోధం విలువ ఇన్ని రెట్లు పెరుగుతుంది","o":["2 times · 2 రెట్లు","4 times · 4 రెట్లు","½ times · ½ రెట్లు","¼ times · ¼ రెట్లు"],"a":2},{"s":4,"q":"1 Volt = ( ? ) ÷ 1 coulomb\n1 వోల్ట్ = ( ? ) ÷ 1 కులూంబ్","o":["1 joule","1 ohm","1 watt","1 ampere"],"a":0},{"s":4,"q":"If a charge ‘q’ move with a velocity ‘v’ perpendicular to the magnetic field ‘B’ then the magnetic force on the charge is\n‘q’ ఆవేశం ‘v’ వేగంతో ‘B’ అయస్కాంత క్షే త్రా నికి లంబంగా కదులుతుంటే ఆ ఆవేశం పై పనిచేసే అయస్కాంత బలం","o":["qvB","qvB²","qvB³","0"],"a":0},{"s":4,"q":"Carbon has the ability to form long chains with other carbon elements called\nకార్బన్ ఇతర పరమాణువులతో కలిసి పొడవైన గొలుసులు వంటి సమ్మేళనాలను ఏర్పరచుటను ఈ విధంగా అంటారు","o":["Isomerism · సాదృశ్యత","Catenation · శృంఖల ధర్మం","Formation of multiple bonds బహు బంధాల ఏర్పాటు","Substitution · ప్ర తిక్షే పణ"],"a":1},{"s":4,"q":"CNG means\nCNG అనగా","o":["Controlled Natural Gas","Compressed Natural Gas","Compressed Nature Gas","Controlled Nature Gas"],"a":1},{"s":4,"q":"Changing directly from gaseous state to solid state without converting into liquid state called\nద్ర వస్థి తిలోకి మారకుండా వాయు స్థి తి నుండి నేరుగా ఘన స్థి తికి మారడాన్ని ఈ విధంగా పిలుస్తా రు","o":["Melting · ద్ర వీభవనం","Sublimation · ఉత్పతనం","Deposition · నిక్షే పణం","Crystallization · స్పటికీకరణం"],"a":2},{"s":4,"q":"Galvanization is a method of coating a thin layer of this metal\nపలుచని ఈ లోహపు పొరను పూతగా పూయడాన్ని గాల్వనీకరణం అంటారు","o":["Iron · ఇనుము","Zinc · జింక్","Aluminium · అల్యూమినియం","Chromium · క్రో మియం"],"a":1},{"s":4,"q":"The process of conversion of dead vegetation into coal is called\nవృక్ష సంపద నెమ్మదిగా నేలబొగ్గు గా మారే ప్ర క్రి యను ఈ విధంగా పిలుస్తా రు","o":["Carbonisation · కార్బోనైజేషన్","Oxidation · ఆక్సీకరణం","Calcination · భస్మీకరణం","Reduction · క్ష యకరణం"],"a":0},{"s":4,"q":"Acid among the following\nక్రింది వానిలో ఆమ్లం","o":["NaOH","CH3COOH","KOH","NH4OH"],"a":1},{"s":4,"q":"Acids reacts with bases to form\nఆమ్లా లు క్షా రాలతో చర్య జరపడం వలన ఏర్పడేవి","o":["Only salts · లవణాలు మాత్ర మే","Only water · నీరు మాత్ర మే","Salt and water · లవణం మరియు నీరు","Bases · క్షా రాలు"],"a":2},{"s":4,"q":"The cognitive domain was explained by\nజ్ఞా నాత్మక రంగాన్ని వివరించిన వారు","o":["B.S. Blooms · బి.యస్. బ్లూ మ్స్","David R. Krathwohl · డేవిడ్. ఆర్. క్రా త్ వోల్","R. H. Dawey · ఆర్. హెచ్. డేవి","Jeevan · జీవన్"],"a":0},{"s":4,"q":"The first step in Project method is\nప్రా కల్పన పద్ద తిలో మొదటి సోపానం","o":["Planning · ప్ర ణాళిక","Execution · నిర్వహణ","Evaluation · మూల్యాంకనం","Providing a situation పరిస్థి తిని కల్పించడం"],"a":3},{"s":4,"q":"In the process of evaluation subject matter, learning experiences and evaluation are three components then the fourth component is\nవిద్యా మూల్యాంకన ప్ర క్రి యలో విషయం,అభ్యాసనానుభవాలు మరియు మూల్యాంకనం మూడు అంశాలైతే నాల్గ వ అంశం","o":["Educational objectives · విద్యా లక్ష్యాలు","Laboratories · ప్ర యోగశాలలు","Attitudes · వైఖరులు","Aptitudes · సహజ సామర్ధ్యాలు"],"a":0},{"s":4,"q":"This is not a use of multiple choice questions\nబహుళ్ళైచ్చిక సమాధాన ప్ర శ్నల వల్ల ప్ర యోజనం కానిది","o":["Questions are objective ప్ర శ్నలు లక్ష్యాత్మకమై ఉంటాయి","Importance given to identification గుర్తింపుకే ప్రా ధాన్యత","Take less time for scoring గణనకు తక్కువ సమయం పడుతుంది","Students writing skills can be tested విద్యార్ధు ల రాత నైపుణ్యాలను పరీక్షించవచ్చు"],"a":3},{"s":5,"q":"Identify the parasitic plant\nపరాన్నజీవ మొక్కను గుర్తించండి","o":["Maize · మొక్కజొన్న","Opuntia · ఒపన్షి యా","Cuscuta · కస్కుటా","Banyan · మర్రి"],"a":2},{"s":5,"q":"Cartilage is found in this part of the body\nమృదులాస్థి ని కలిగి ఉండే శరీరభాగం","o":["Ear lobe · చెవి తమ్మె","Skin · చర్మం","Heart · గుండె","Eye · కన్ను"],"a":0},{"s":5,"q":"Find the odd one among the following\nక్రింది వానిలో భిన్నమైన దానిని కనుగొనండి.","o":["Rocks · రాళ్ళు","Sunlight · సూర్యరశ్మి","Soil · మట్టి","Animals · జంతువులు"],"a":3},{"s":5,"q":"This tissue is found in the tendrils and stems of climbers\nనులితీగలు, ఎగబ్రా కే మొక్కల కాండాలలో ఉండే కణజాలం","o":["Collenchyma · స్థూ లకోణ కణజాలం","Parenchyma · మృదు కణజాలం","Aerenchyma · వాయుగత కణజాలం","Complex Permanent Tissue సంక్లి ష్ట శాశ్వత కణజాలం"],"a":0},{"s":5,"q":"Yeast is used in the production of\nదీని ఉత్పత్తి లో ఈస్టు ను ఉపయోగిస్తా రు","o":["Alcohol and Baking soda ఆల్కహాల్ మరియు బేకింగ్ సోడా","Sugar and Fertiliser · చక్కెర మరియు ఎరువు","Bread and Alcohol · బ్రె డ్ మరియు ఆల్కహాల్","Curd and Vinegar · పెరుగు మరియు వెనిగర్"],"a":2},{"s":5,"q":"The most common carrier of communicable diseases is\nఅంటువ్యాధులకు అత్యంత సాధారణ వాహకం.","o":["Housefly · ఈగ","Pig · పంది","Spider · సాలీడు","Cockroach · బొద్దింక"],"a":0},{"s":5,"q":"This food nutrient gives blue black colour with iodine solution\nఆహారంలోని ఈ పోషకము అయోడిన్తో నీలి నలుపు రంగును ఇస్తుంది.","o":["Starch · పిండి పదార్ధం","Vitamin A · విటమిన్ A","Fat · క్రొ వ్వు","Iron · ఐరన్"],"a":0},{"s":5,"q":"Examples for rabi crops\nరబీ పంటలకు ఉదాహరణలు","o":["Green gram and black gram పెసలు మరియు మినుములు","Paddy and cotton · వరి మరియు ప్ర త్తి","Maize and cotton · మొక్కజొన్న మరియు ప్ర త్తి","Wheat and Mustard · గోధుమ మరియు ఆవాలు"],"a":3},{"s":5,"q":"The air enters the body of Cockroach through\nబొద్దింక శరీరంలోనికి గాలి ప్ర వేశించే మార్గం","o":["Lungs · ఊపిరితిత్తు లు","Gills · మొప్పలు","Spiracles · శ్వాసరంధ్రా లు","Skin · చర్మం"],"a":2},{"s":5,"q":"The colour of Lymph\nశోషరసం రంగు","o":["Red · ఎరుపు","Yellow · పసుపు","Green · ఆకుపచ్చ","Colourless · వర్ణ రహితము"],"a":3},{"s":5,"q":"After fertilisation the ovary of a flower turns into\nఫలదీకరణ౦ తరువాత పుష్పంలోని అండాశయం ఈభాగంగా మార్పుచెందును","o":["Seed · విత్త నం","Stalk · కాడ","Gamete · సంయోగ బీజం","Fruit · ఫలం"],"a":3},{"s":5,"q":"Match the following.\nజత పరచండి.\n(A) Fungi · శిలీంధ్రం — (i) Primary consumer · ప్రాథమిక వినియోగదారు\n(B) Eagle · గ్రద్ద — (ii) Producer · ఉత్పత్తిదారు\n(C) Grasshopper · గొల్లభామ — (iii) Tertiary consumer · తృతీయ వినియోగదారు\n(D) Algae · శైవలం — (iv) Decomposer · విచ్ఛిన్నకారి","o":["A - ii  B - iv  C - iii  D - i","A - i  B - iii  C - iv  D - ii","A - iii  B - ii  C - iv  D - i","A - iv  B - iii  C - i  D - ii"],"a":3},{"s":5,"q":"The amount of organic matter available at each trophic level for the next level is\nప్ర తి పోషక స్థా యిలోను, తరువాతి స్థా యి కోసం లభ్యమయ్యే సేంద్రీ య పదార్ధం యొక్క పరిమాణం","o":["90%","100%","10%","0.1%"],"a":2},{"s":5,"q":"Sewage is a\nమురుగునీరు ఒక","o":["Solid waste produced in houses ఇండ్ల లో ఏర్పడే ఘనరూప వ్యర్ధం","Liquid waste produced in houses ద్ర వరూప వ్యర్ధం","Decomposed matter formed from plant wastes మొక్కల వ్యర్ధా ల నుండి ఏర్పడిన కుళ్ళిన పదార్ధం","Dry dung · ఎండిన పేడ"],"a":1},{"s":5,"q":"Non-biodegradable wastes are\nజీవ విచ్ఛిన్నం కాని వ్యర్ధా లు","o":["Broken down by enzymes ఎంజైముల చేత విచ్ఛిన్నం చెందుతాయి","Broken down under ambient conditions సహజ పరిస్థి తులలో విచ్ఛిన్నం చెందుతాయి","Not Broken down by the action of bacteria బాక్టీ రియాల చర్యల వలన విచ్ఛిన్నం కావు","Broken down by the action of saprophytes పూతికాహారుల చర్యల వలన విచ్ఛిన్నం చెందుతాయి"],"a":2},{"s":5,"q":"Droughts and desertification are the results of\nకరువులు మరియు ఎడారీకరణ దీని యొక్క ఫలితాలు","o":["Water pollution · నీటి కాలుష్యం","Deforestation · అడవుల నరికివేత","Grazing and Animal Breeding పశువులను మేపడం మరియు ప్ర జననం చేయడం","Natural Reforestation సహజమైన అడవుల పునరుద్ధ రణ"],"a":1},{"s":5,"q":"Identify the Primary process skill of science\nక్రింది వానిలో విజ్ఞా నశాస్త్ర ప్రా థమిక ప్ర క్రి యా నైపుణ్యాలను గుర్తించండి\nA) Conducting experiments · ప్ర యోగాలు చేయడం\nB) Observations · పరిశీలించడం\nC) Estimation · అంచనా వేయడం\nD) Developing Hypothesis · ప్ర కల్పనలు రూపొందించడం","o":["A, B only","A, B, C only","C, D only","B, C only"],"a":3},{"s":5,"q":"This domine represents emotions, feelings, values, interests, likes, attitudes etc. of a student is\nవిద్యార్ధి యొక్క ఉద్వేగాలను, అనుభవాలను, విలువలను, అభిరుచులను, ఇష్టా లు, వైఖరులు మొదలైన వాటిని సూచించే రంగం","o":["Affective domine · భావావేశ రంగం","Cognitive domine · జ్ఞా న రంగం","Physical domine · భౌతిక రంగం","Psychomotor domine మానసిక చలనాత్మక రంగం"],"a":0},{"s":5,"q":"In this method, students find ways to solve problems in natural environment\nఈ పద్ధ తిలో విద్యార్ధు లు సహజ వాతావరణంలో సమస్యకు పరిష్కార మార్గా లు కనిపెడతారు","o":["Lecture method · ఉపన్యాస ప్ర దర్శనా పద్ధ తి","Lecture demonstration method ఉపన్యాస ప్ర దర్శనా పద్ధ తి","Laboratory method · ప్ర యోగశాల పద్ధ తి","Project method · ప్రా జెక్ట్ పద్ధ తి"],"a":3},{"s":5,"q":"“The activities conducted by pupil under the monitoring of the teacher is called educational planning” – said by\n“ఉపాధ్యాయుని పర్యవేక్ష ణలో విద్యార్ధు లు నిర్వహించే కృత్యాల సముదాయమే విద్యాప్ర ణాళిక” – అని తెలిపినది","o":["Spears · స్పియర్స్","Murre · ముర్రే","Cunning Hamm · కన్నింగ్ హామ్","W. S. Jacobson · W. S. జాకబ్ సన్"],"a":0}];
+
+/* ============ helpers ============ */
+function $(id){return document.getElementById(id)}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function shuf(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function pad(n){return(n<10?'0':'')+n}
+function hms(ms){var s=Math.max(0,Math.floor(ms/1000));return pad(Math.floor(s/3600))+':'+pad(Math.floor(s%3600/60))+':'+pad(s%60)}
+function norm(s){return String(s).trim().toLowerCase().replace(/\s+/g,' ')}
+var LET=['A','B','C','D'];
+var hasUrl=function(){return CONFIG.SCRIPT_URL&&CONFIG.SCRIPT_URL.indexOf('http')===0};
+var STORE_OK=true;
+var LS=(function(){try{var k='__t';localStorage.setItem(k,'1');localStorage.removeItem(k);return localStorage}catch(e){STORE_OK=false;var m={};return{getItem:function(k){return k in m?m[k]:null},setItem:function(k,v){m[k]=String(v)},removeItem:function(k){delete m[k]}}}})();
+var START_MS=CONFIG.START_AT?new Date(CONFIG.START_AT).getTime():NaN, END_MS=CONFIG.END_AT?new Date(CONFIG.END_AT).getTime():NaN;
+var SKEW=0;function nowMs(){return Date.now()+SKEW}
+var KP='aptet2:'+CONFIG.TEST_ID+':';
+
+/* ============ anti-copy ============ */
+document.addEventListener('contextmenu',function(e){e.preventDefault()});
+document.addEventListener('selectstart',function(e){if(!/INPUT|TEXTAREA/.test(e.target.tagName))e.preventDefault()});
+['copy','cut','dragstart'].forEach(function(t){document.addEventListener(t,function(e){e.preventDefault()})});
+document.addEventListener('keydown',function(e){var k=(e.key||'').toLowerCase();
+ if(e.key==='F12'||(e.ctrlKey&&(k==='u'||k==='s'||(k==='p'&&!(A&&A.done))))||(e.ctrlKey&&e.shiftKey&&(k==='i'||k==='j'||k==='c')))e.preventDefault()});
+
+/* ============ state ============ */
+var A=null, timerH=null, submitting=false, curFilter='all';
+function save(){if(!A)return;try{LS.setItem(KP+'att:'+A.key,JSON.stringify(A));LS.setItem(KP+'cur',A.key)}catch(e){}}
+function loadAtt(key){try{var s=LS.getItem(KP+'att:'+key);return s?JSON.parse(s):null}catch(e){return null}}
+function modal(t,b){$('mmT').textContent=t;$('mmB').innerHTML=b;$('mMsg').classList.remove('hidden')}
+$('mmOk').onclick=function(){$('mMsg').classList.add('hidden')};
+
+/* ============ start screen ============ */
+$('hTitle').textContent='APTET PAPER 2A — FULL MOCK TEST '+CONFIG.TEST_NO;
+$('hId').textContent=CONFIG.TEST_ID;$('fDur').textContent=CONFIG.DURATION_MIN;
+function fmtIST(ms){return new Date(ms).toLocaleString('en-IN',{timeZone:'Asia/Kolkata',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})+' IST'}
+function winStatus(){var n=nowMs();if(!isNaN(START_MS)&&n<START_MS)return'before';if(!isNaN(END_MS)&&n>=END_MS)return'after';return'open'}
+function refreshSched(){
+ var st=winStatus(),el=$('sched'),go=$('go');
+ var t='Examination window: '+(!isNaN(START_MS)?'opens '+fmtIST(START_MS):'open now')+(!isNaN(END_MS)?' • closes '+fmtIST(END_MS):'');
+ el.className='notice info';
+ if(st==='before'){el.className='notice bad';t='Examination has not started yet. Scheduled start: '+fmtIST(START_MS)+'. Opens in '+hms(START_MS-nowMs())}
+ else if(st==='after'){el.className='notice bad';t='This examination is closed. Closing time was '+fmtIST(END_MS)+'. New attempts are not permitted.'}
+ el.textContent=t;go.disabled=(st!=='open');
+}
+setInterval(function(){if(!$('start').classList.contains('hidden'))refreshSched()},1000);
+
+function buildAttempt(name,dist){
+ var order=[];
+ SUBJ.forEach(function(sj,si){
+  var ids=[];DATA.forEach(function(q,i){if(q.s===si)ids.push(i)});
+  shuf(ids).forEach(function(id){order.push([id,shuf([0,1,2,3])])});
+ });
+ var t0=nowMs(),dl=t0+CONFIG.DURATION_MIN*60000;if(!isNaN(END_MS))dl=Math.min(dl,END_MS);
+ return {v:2,aid:Date.now().toString(36)+Math.random().toString(36).slice(2,9),key:norm(name)+'|'+norm(dist),name:name,district:dist,
+  test:CONFIG.TEST_ID,t0:t0,deadline:dl,order:order,ans:{},rev:{},cur:0,done:false,sent:false,score:null};
+}
+function serverCall(payload,ms){
+ var c=('AbortController' in window)?new AbortController():null,tm=c&&setTimeout(function(){c.abort()},ms||9000);
+ return fetch(CONFIG.SCRIPT_URL,{method:'POST',body:JSON.stringify(payload),signal:c?c.signal:undefined})
+  .then(function(r){return r.json()}).then(function(j){clearTimeout(tm);if(j&&j.now)SKEW=j.now-Date.now();return j}).catch(function(){clearTimeout(tm);return null});
+}
+$('go').onclick=function(){
+ var nm=$('nm').value.trim(),ds=$('ds').value.trim();
+ if(nm.length<2){$('serr').textContent='Name is mandatory. Please enter your name.';$('nm').focus();return}
+ if(ds.length<2){$('serr').textContent='District is mandatory. Please enter your district.';$('ds').focus();return}
+ $('serr').textContent='';
+ var key=norm(nm)+'|'+norm(ds),old=loadAtt(key);
+ if(old){enter(old,true);return}
+ if(winStatus()!=='open'){refreshSched();return}
+ var a=buildAttempt(nm,ds);$('go').disabled=true;$('go').textContent='Checking…';
+ var fin=function(){$('go').textContent='Start Examination';refreshSched()};
+ var begin=function(){fin();if(winStatus()!=='open')return;a.t0=nowMs();a.deadline=a.t0+CONFIG.DURATION_MIN*60000;if(!isNaN(END_MS))a.deadline=Math.min(a.deadline,END_MS);save();enter(a,false)};
+ if(!hasUrl()){begin();return}
+ serverCall({action:'start',id:a.aid,name:nm,district:ds,test:CONFIG.TEST_ID,ts:Date.now()}).then(function(j){
+  if(j&&j.ok&&j.exists&&j.aid!==a.aid){fin();$('serr').textContent='This test has already been attempted by this name and district. A second attempt is not permitted.';return}
+  if(!j){modal('Could not verify with the server','Your internet connection or the score server did not respond. You may continue, but the one-attempt rule can then be enforced only on this device.')}
+  begin();
+ });
+};
+function enter(att,resumed){
+ A=att;
+ if(A.done){showResult();return}
+ if(nowMs()>=A.deadline){finalize(true);return}
+ $('start').classList.add('hidden');$('result').classList.add('hidden');$('exam').classList.remove('hidden');
+ $('eTitle').textContent='APTET PAPER 2A — FULL MOCK TEST '+CONFIG.TEST_NO;$('eSub').textContent='MATHEMATICS AND SCIENCES • Test ID: '+CONFIG.TEST_ID+' • 150 Questions • 150 Marks';
+ $('eWho').innerHTML='<b>'+esc(A.name)+'</b><br>'+esc(A.district);
+ buildSubs();render();tick();clearInterval(timerH);timerH=setInterval(tick,500);window.scrollTo(0,0);
+ if(resumed)modal('Welcome back','Your timer and answers have been restored. The clock did not restart.');
+ if(!STORE_OK)modal('Browser storage is blocked','Your answers cannot be saved if you refresh. Please do not refresh this page.');
+}
+function tick(){
+ if(!A||A.done)return;
+ var left=A.deadline-nowMs();$('tm').textContent=hms(left);$('tbox').classList.toggle('low',left<=600000);
+ if(left<=0)finalize(true);
+}
+window.addEventListener('beforeunload',function(e){if(A&&!A.done){e.preventDefault();e.returnValue=''}});
+
+/* ============ exam rendering ============ */
+function subRange(si){var f=-1,l=-1;A.order.forEach(function(o,p){if(DATA[o[0]].s===si){if(f<0)f=p;l=p}});return[f,l]}
+function buildSubs(){var h='';SUBJ.forEach(function(s,i){h+='<button class="sbtn" data-i="'+i+'">'+s.n+'<i id="sc'+i+'"></i></button>'});$('subs').innerHTML=h}
+$('subs').onclick=function(e){var b=e.target.closest('.sbtn');if(b)goTo(subRange(+b.dataset.i)[0])};
+function stateOf(p){var a=A.ans[p]!==undefined,r=!!A.rev[p];return a&&r?'ansrev':a?'ans':r?'rev':''}
+function goTo(p){if(p<0||p>=A.order.length)return;A.cur=p;save();render();$('pal').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'})}
+function render(){
+ var p=A.cur,o=A.order[p],q=DATA[o[0]],perm=o[1],sel=A.ans[p];
+ $('qno').textContent='Question '+(p+1)+' of '+A.order.length;$('qsub').textContent='• '+SUBJ[q.s].full;
+ $('qt').textContent=q.q;$('qrev').classList.toggle('hidden',!A.rev[p]);
+ var h='';perm.forEach(function(oi,k){h+='<div class="opt'+(sel===k?' sel':'')+'" data-k="'+k+'"><span class="l">'+LET[k]+'</span><span>'+esc(q.o[oi])+'</span></div>'});
+ $('opts').innerHTML=h;
+ $('mark').textContent=A.rev[p]?'Remove Review Mark':'Mark for Review';
+ $('clr').disabled=(sel===undefined);$('prev').disabled=(p===0);$('next').disabled=(p===A.order.length-1);
+ drawPalette();
+}
+function counts(){var a=0,r=0,ar=0;for(var p=0;p<A.order.length;p++){var x=A.ans[p]!==undefined,y=!!A.rev[p];if(x)a++;if(y)r++;if(x&&y)ar++}return{a:a,u:A.order.length-a,r:r,ar:ar}}
+function drawPalette(){
+ var c=counts();$('cA').textContent=c.a;$('cU').textContent=c.u;$('cR').textContent=c.r;
+ var h='';
+ SUBJ.forEach(function(s,si){
+  var r=subRange(si),ans=0;h+='<div class="ph">'+esc(s.full)+' (Q'+(r[0]+1)+'–'+(r[1]+1)+')</div><div class="grid">';
+  for(var p=r[0];p<=r[1];p++){if(A.ans[p]!==undefined)ans++;h+='<button class="pb '+stateOf(p)+(p===A.cur?' cur':'')+'" data-p="'+p+'">'+(p+1)+'</button>'}
+  h+='</div>';$('sc'+si).textContent=ans+'/'+(r[1]-r[0]+1);
+ });
+ $('pscroll').innerHTML=h;
+ var cs=DATA[A.order[A.cur][0]].s;[].forEach.call(document.querySelectorAll('.sbtn'),function(b,i){b.classList.toggle('on',i===cs)});
+}
+$('opts').onclick=function(e){var o=e.target.closest('.opt');if(!o||!A||A.done)return;A.ans[A.cur]=+o.dataset.k;save();render()};
+$('clr').onclick=function(){if(A.done)return;delete A.ans[A.cur];save();render()};
+$('mark').onclick=function(){if(A.done)return;if(A.rev[A.cur])delete A.rev[A.cur];else A.rev[A.cur]=1;save();render()};
+$('pscroll').onclick=function(e){var b=e.target.closest('.pb');if(b)goTo(+b.dataset.p)};
+$('prev').onclick=function(){goTo(A.cur-1)};$('next').onclick=function(){goTo(A.cur+1)};
+$('pfab').onclick=function(){$('pal').classList.toggle('open');$('pclose').style.display=$('pal').classList.contains('open')?'block':'none'};
+$('pclose').onclick=function(){$('pal').classList.remove('open')};
+document.addEventListener('keydown',function(e){if(!A||A.done||$('exam').classList.contains('hidden'))return;if(e.key==='ArrowRight')goTo(A.cur+1);if(e.key==='ArrowLeft')goTo(A.cur-1)});
+
+/* ============ submit ============ */
+$('subBtn').onclick=function(){var c=counts();$('sA').textContent=c.a;$('sU').textContent=c.u;$('sR').textContent=c.r;$('sAR').textContent=c.ar;$('mConfirm').classList.remove('hidden')};
+$('no').onclick=function(){$('mConfirm').classList.add('hidden')};
+$('yes').onclick=function(){$('mConfirm').classList.add('hidden');finalize(false)};
+function grade(){
+ var sc=0,per=SUBJ.map(function(){return{c:0,t:0,w:0,u:0}});
+ A.order.forEach(function(o,p){var q=DATA[o[0]],pr=per[q.s];pr.t++;var s=A.ans[p];if(s===undefined)pr.u++;else if(o[1][s]===q.a){pr.c++;sc++}else pr.w++});
+ return {score:sc,per:per};
+}
+function finalize(auto){
+ if(!A||A.done||submitting)return;submitting=true;clearInterval(timerH);
+ var g=grade();A.done=true;A.score=g.score;A.per=g.per;A.submittedAt=Math.min(nowMs(),A.deadline);A.secs=Math.max(0,Math.floor((A.submittedAt-A.t0)/1000));A.auto=!!auto;
+ save();submitting=false;showResult();sendScore();
+}
+/* score submission (same payload as before, one record per attempt id) */
+function sendScore(){
+ if(!A||!A.done||A.sent)return Promise.resolve();
+ if(!hasUrl()){setSend('Score submission is not configured in this file (no Google Script URL). Your result is shown below.','info');return Promise.resolve()}
+ setSend('Sending your score to the leaderboard…','info');$('retry').classList.add('hidden');
+ return serverCall({id:A.aid,name:A.name,district:A.district,test:A.test,score:A.score,total:A.order.length,secs:A.secs,ts:Date.now(),
+   correct:A.score,unanswered:A.per.reduce(function(s,x){return s+x.u},0)},12000).then(function(j){
+  if(j&&j.ok!==false){A.sent=true;A.rank=j.rank;A.ptotal=j.total;save();setSend(j.rank?('Score recorded. Your position: '+j.rank+' of '+j.total+' candidates.'):'Score recorded.','info')}
+  else{setSend((j&&j.error==='attempt-mismatch')?'The server already holds a different attempt for this name and district, so this score was not recorded.':'Your score could not be sent (network problem). It is saved on this device — press the button to retry.','bad');if(!(j&&j.error==='attempt-mismatch'))$('retry').classList.remove('hidden')}
+ });
+}
+function setSend(t,k){$('rSend').textContent=t;$('rSend').className='notice '+k}
+$('retry').onclick=sendScore;
+
+/* ============ result ============ */
+function showResult(){
+ $('start').classList.add('hidden');$('exam').classList.add('hidden');$('result').classList.remove('hidden');$('mConfirm').classList.add('hidden');
+ var g=A.per,c=A.score,tot=A.order.length,att=g.reduce(function(s,x){return s+x.c+x.w},0),wr=g.reduce(function(s,x){return s+x.w},0),un=tot-att;
+ $('rName').textContent=A.name;
+ $('rMeta').innerHTML='District: '+esc(A.district)+' • Test ID: '+esc(CONFIG.TEST_ID)+'<br>Date: '+new Date(A.submittedAt).toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'})+' • Time taken: '+hms(A.secs*1000)+(A.auto?' (auto-submitted)':'');
+ $('rScore').textContent=c;$('rPct').textContent=(c/tot*100).toFixed(1)+'%';
+ $('rBd').innerHTML='<div><b>'+c+'</b>Correct</div><div><b>'+wr+'</b>Incorrect</div><div><b>'+un+'</b>Not answered</div>';
+ var t='<tr><th>Subject</th><th>Score</th><th>Correct</th><th>Wrong</th><th>Blank</th><th style="width:22%">Performance</th></tr>';
+ SUBJ.forEach(function(s,i){var x=g[i];t+='<tr><td>'+esc(s.full)+'</td><td><b>'+x.c+'/'+x.t+'</b></td><td>'+x.c+'</td><td>'+x.w+'</td><td>'+x.u+'</td><td><div class="bar"><i style="width:'+Math.round(x.c/x.t*100)+'%"></i></div></td></tr>'});
+ t+='<tr><td><b>Total</b></td><td><b>'+c+'/'+tot+'</b></td><td>'+c+'</td><td>'+wr+'</td><td>'+un+'</td><td></td></tr>';
+ $('rSub').innerHTML=t;
+ if(A.sent)setSend(A.rank?('Score recorded. Your position: '+A.rank+' of '+A.ptotal+' candidates.'):'Score recorded.','info');
+ else if(hasUrl()){setSend('Your score has not been sent yet.','bad');$('retry').classList.remove('hidden')}
+ else setSend('Score submission is not configured in this file. Your result is shown below.','info');
+ drawFilters();drawReview();window.scrollTo(0,0);
+}
+function drawFilters(){
+ var f=[['all','All questions']].concat([['c','Correct'],['w','Incorrect'],['u','Not answered']]).concat(SUBJ.map(function(s,i){return['s'+i,s.n]}));
+ $('fl').innerHTML=f.map(function(x){return'<button data-f="'+x[0]+'" class="'+(x[0]===curFilter?'on':'')+'">'+x[1]+'</button>'}).join('');
+}
+$('fl').onclick=function(e){var b=e.target.closest('button');if(!b)return;curFilter=b.dataset.f;drawFilters();drawReview()};
+function drawReview(){
+ var h='';
+ A.order.forEach(function(o,p){
+  var q=DATA[o[0]],perm=o[1],s=A.ans[p],ok=s!==undefined&&perm[s]===q.a,k=s===undefined?'u':ok?'c':'w';
+  if(curFilter==='c'||curFilter==='w'||curFilter==='u'){if(k!==curFilter)return}
+  else if(curFilter.charAt(0)==='s'&&q.s!==+curFilter.slice(1))return;
+  var ci=perm.indexOf(q.a);
+  h+='<div class="rv"><div class="t">Question '+(p+1)+' • '+esc(SUBJ[q.s].full)+'</div><div class="q">'+esc(q.q)+'</div>'
+   +'<div class="a"><span class="st '+k+'">'+(k==='c'?'CORRECT':k==='w'?'INCORRECT':'NOT ANSWERED')+'</span>Your answer: '+(s===undefined?'Not answered':'<b>'+LET[s]+'.</b> '+esc(q.o[perm[s]]))+'</div>'
+   +'<div class="a">Correct answer: <b>'+LET[ci]+'.</b> '+esc(q.o[q.a])+'</div>'+(q.e?'<div class="e"><b>Explanation:</b> '+esc(q.e)+'</div>':'')+'</div>';
+ });
+ $('rv').innerHTML=h||'<div style="padding:14px;color:var(--mut)">No questions in this view.</div>';
+}
+
+/* ============ PDF report: real file download (html2canvas + jsPDF, loaded on demand); print dialog is only a fallback ============ */
+function rpHead(){
+ var tot=A.order.length,g=A.per,att=g.reduce(function(s,x){return s+x.c+x.w},0),wr=g.reduce(function(s,x){return s+x.w},0),un=tot-att;
+ var h='<div class="ph1"><h1>APTET PAPER 2A — FULL MOCK TEST '+esc(CONFIG.TEST_NO)+'</h1><h2>MATHEMATICS AND SCIENCES • RESPONSES &amp; ANSWER KEY</h2></div>'
+  +'<div class="meta"><b>Candidate:</b> '+esc(A.name)+' &nbsp;|&nbsp; <b>District:</b> '+esc(A.district)+'<br><b>Test ID:</b> '+esc(CONFIG.TEST_ID)+' &nbsp;|&nbsp; <b>Date:</b> '+new Date(A.submittedAt).toLocaleDateString('en-IN',{day:'2-digit',month:'long',year:'numeric'})+' &nbsp;|&nbsp; <b>Time taken:</b> '+hms(A.secs*1000)+'</div>'
+  +'<div class="big">Score: '+A.score+' / '+tot+' ('+(A.score/tot*100).toFixed(1)+'%) &nbsp; Correct: '+A.score+' &nbsp; Wrong: '+wr+' &nbsp; Not answered: '+un+'</div>'
+  +'<table><tr><th>Subject</th><th>Score</th><th>Correct</th><th>Wrong</th><th>Not answered</th></tr>';
+ SUBJ.forEach(function(s,i){var x=g[i];h+='<tr><td>'+esc(s.full)+'</td><td><b>'+x.c+'/'+x.t+'</b></td><td>'+x.c+'</td><td>'+x.w+'</td><td>'+x.u+'</td></tr>'});
+ return h+'</table>';
+}
+function rpQ(p){
+ var o=A.order[p],q=DATA[o[0]],perm=o[1],s=A.ans[p],ci=perm.indexOf(q.a),k=s===undefined?'u':(s===ci?'c':'w');
+ var h='<div class="pq"><div class="h"><b>Question '+(p+1)+'</b><span class="stt '+k+'">'+(k==='c'?'CORRECT':k==='w'?'WRONG':'NOT ANSWERED')+'</span></div><div class="q">'+esc(q.q)+'</div>';
+ perm.forEach(function(oi,j){
+  var cls='po',tag='';
+  if(j===ci){cls+=' ok';tag='✔ Correct answer'+(s===j?' (your answer)':'')}else if(s===j){cls+=' bad';tag='✘ Your answer (wrong)'}
+  h+='<div class="'+cls+'"><b>'+LET[j]+'.</b> '+esc(q.o[oi])+(tag?'<span class="tag">'+tag+'</span>':'')+'</div>';
+ });
+ if(s===undefined)h+='<div style="font-size:12px;margin-top:2px"><i>Your answer: Not answered</i></div>';
+ if(q.e)h+='<div class="ex"><b>Explanation:</b> '+esc(q.e)+'</div>';
+ return h+'</div>';
+}
+function rpSec(si){return '<div class="sec">'+esc(SUBJ[si].full)+'</div>'}
+function rpFoot(){return '<div class="foot"><b>'+esc(CREDIT)+'</b><br>'+esc(SITE)+'</div>'}
+function buildPrint(){ // fallback: browser print dialog
+ var h=rpHead(),last=-1;
+ A.order.forEach(function(o,p){var q=DATA[o[0]];if(q.s!==last){last=q.s;h+=rpSec(q.s)}h+=rpQ(p)});
+ $('printArea').innerHTML=h+rpFoot();
+}
+function printFallback(){
+ buildPrint();var old=document.title;document.title='APTET_'+CONFIG.TEST_ID+'_'+A.name.replace(/[^\w]+/g,'_')+'_Responses';
+ window.addEventListener('afterprint',function f(){window.removeEventListener('afterprint',f);document.title=old;$('printArea').innerHTML=''});
+ setTimeout(function(){window.print()},150);
+}
+function loadJS(src){return new Promise(function(res,rej){var s=document.createElement('script');s.src=src;s.onload=res;s.onerror=function(){rej(new Error('load '+src))};document.head.appendChild(s)})}
+function ensureLibs(){
+ var p=Promise.resolve();
+ if(!window.html2canvas)p=p.then(function(){return loadJS('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js')});
+ if(!(window.jspdf&&window.jspdf.jsPDF))p=p.then(function(){return loadJS('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js')});
+ return p;
+}
+function paginate(){
+ var st=$('pdfStage'),H=1123-38-54,pages=[[]],used=0,probe=document.createElement('div');probe.className='pg';probe.style.height='auto';probe.style.paddingBottom='0';st.innerHTML='';st.appendChild(probe);
+ function put(html){probe.innerHTML=html;var hh=probe.scrollHeight-38+9;if(used+hh>H&&pages[pages.length-1].length){pages.push([]);used=0}pages[pages.length-1].push(html);used+=hh}
+ put(rpHead());var last=-1;
+ A.order.forEach(function(o,p){var q=DATA[o[0]];if(q.s!==last){last=q.s;put(rpSec(q.s)+rpQ(p));return}put(rpQ(p))});
+ return pages;
+}
+var pdfBusy=false;
+$('pdfBtn').onclick=function(){
+ if(!A||!A.done||pdfBusy)return;pdfBusy=true;var btn=$('pdfBtn'),lab=btn.innerHTML;btn.disabled=true;btn.textContent='Preparing PDF… please wait';
+ var fail=function(err){pdfBusy=false;btn.disabled=false;btn.innerHTML=lab;$('pdfBtn').blur();$('pdfStage').innerHTML='';
+  modal('Direct PDF download is not available','Your browser could not create the PDF file directly (internet needed for the first use). The print window will open instead — choose <b>Save as PDF</b> as the destination.');setTimeout(printFallback,600)};
+ ensureLibs().then(function(){return(document.fonts&&document.fonts.ready)||0}).then(function(){
+  var pages=paginate(),pdf=new window.jspdf.jsPDF({unit:'mm',format:'a4',compress:true}),st=$('pdfStage'),i=0;
+  function next(){
+   if(i>=pages.length){pdf.save('APTET_'+CONFIG.TEST_ID+'_'+A.name.replace(/[^\w]+/g,'_')+'_Responses.pdf');st.innerHTML='';pdfBusy=false;btn.disabled=false;btn.innerHTML=lab;return}
+   btn.textContent='Preparing PDF… page '+(i+1)+' of '+pages.length;
+   st.innerHTML='<div class="pg" id="pgNow">'+pages[i].join('')+'<div class="pfoot"><b>'+esc(CREDIT)+'</b><br>'+esc(SITE)+' • Page '+(i+1)+' of '+pages.length+'</div></div>';
+   setTimeout(function(){
+    window.html2canvas($('pgNow'),{scale:1.35,backgroundColor:'#ffffff',logging:false}).then(function(cv){
+     if(i>0)pdf.addPage();pdf.addImage(cv.toDataURL('image/jpeg',0.8),'JPEG',0,0,210,297);i++;next();
+    }).catch(fail);
+   },30);
+  }
+  next();
+ }).catch(fail);
+};
+
+/* ============ leaderboard ============ */
+var lbTimer=null,lbData=null;
+function fetchBoard(cb){
+ if(!hasUrl()){cb({ok:false,local:true});return}
+ fetch(CONFIG.SCRIPT_URL+'?action=lb&test='+encodeURIComponent(CONFIG.TEST_ID)+'&id='+encodeURIComponent(A?A.aid:'')+'&_='+Date.now()).then(function(r){return r.json()}).then(function(j){j.ok=true;cb(j)}).catch(function(){cb({ok:false})});
+}
+function drawLB(){
+ var j=lbData;
+ if(!j||!j.ok){$('lbT').innerHTML='<tr><td>'+(j&&j.local?'Leaderboard needs the Google Script URL to be configured.':'Loading… (check your internet)')+'</td></tr>';$('lbNote').textContent='';return}
+ var h='<tr><th>#</th><th>Name</th><th>District</th><th>Score</th></tr>',me=A?A.name.toLowerCase():'',md=A?A.district.toLowerCase():'';
+ (j.top||[]).forEach(function(r,i){var m=A&&A.done&&r.name.toLowerCase()===me&&r.district.toLowerCase()===md;h+='<tr class="'+(m?'me':'')+'"><td>'+(i+1)+'</td><td>'+esc(r.name)+'</td><td>'+esc(r.district)+'</td><td>'+r.score+'</td></tr>'});
+ if(!(j.top||[]).length)h+='<tr><td colspan="4">No scores yet.</td></tr>';
+ $('lbT').innerHTML=h;$('lbMe').textContent=(A&&A.done&&j.rank)?'Your position: '+j.rank+' of '+j.total:'';$('lbNote').textContent='Total participants: '+(j.total||0)+'. Refreshes automatically.';
+}
+function openLB(){$('mLB').classList.remove('hidden');lbData=null;drawLB();var f=function(){fetchBoard(function(j){lbData=j;drawLB()})};f();clearInterval(lbTimer);lbTimer=setInterval(f,20000)}
+$('lbClose').onclick=function(){clearInterval(lbTimer);$('mLB').classList.add('hidden')};
+$('lbStart').onclick=openLB;$('lbRes').onclick=openLB;
+
+/* ============ certificate ============ */
+$('certBtn').onclick=function(){
+ var W=1600,H=1130,cv=$('cv');cv.width=W;cv.height=H;var x=cv.getContext('2d');
+ var g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,'#ffffff');g.addColorStop(1,'#e8f6f7');x.fillStyle=g;x.fillRect(0,0,W,H);
+ x.strokeStyle='#0b2447';x.lineWidth=14;x.strokeRect(30,30,W-60,H-60);x.strokeStyle='#0e9aa7';x.lineWidth=4;x.strokeRect(54,54,W-108,H-108);
+ x.textAlign='center';x.fillStyle='#0b2447';x.font='700 66px Inter, sans-serif';x.fillText('CERTIFICATE OF APPRECIATION',W/2,200);
+ x.fillStyle='#0e9aa7';x.fillRect(W/2-260,225,520,5);
+ x.fillStyle='#334';x.font='400 30px Inter, sans-serif';x.fillText('This certificate is proudly presented to',W/2,310);
+ x.fillStyle='#1d4ed8';var nm=A.name,fs=84;x.font='700 '+fs+'px Inter, "Noto Sans Telugu", sans-serif';
+ while(x.measureText(nm).width>W-300&&fs>34){fs-=4;x.font='700 '+fs+'px Inter, "Noto Sans Telugu", sans-serif'}
+ x.fillText(nm,W/2,430);
+ x.fillStyle='#334';x.font='400 30px Inter, "Noto Sans Telugu", sans-serif';x.fillText('District: '+A.district,W/2,490);
+ x.font='400 32px Inter, sans-serif';x.fillText('for participating in the',W/2,570);
+ x.fillStyle='#0b2447';x.font='700 40px Inter, sans-serif';x.fillText('APTET Paper 2A (Maths & Science) – Full Mock Test '+CONFIG.TEST_NO,W/2,630);
+ x.fillStyle='#19376d';x.font='600 26px Inter, sans-serif';x.fillText('Test ID: '+CONFIG.TEST_ID,W/2,676);
+ x.fillStyle='#0e9aa7';x.font='700 96px Inter, sans-serif';x.fillText(A.score+' / '+A.order.length,W/2,790);
+ x.fillStyle='#334';x.font='400 28px Inter, sans-serif';x.fillText('Score: '+(A.score/A.order.length*100).toFixed(1)+'%   •   Date: '+new Date(A.submittedAt).toLocaleDateString('en-GB'),W/2,845);
+ x.fillStyle='#445';x.font='italic 28px Inter, sans-serif';x.fillText('Wishing you great success in APTET!',W/2,905);
+ x.fillStyle='#0b2447';x.font='700 27px Inter, sans-serif';x.fillText(CREDIT,W/2,995);
+ x.fillStyle='#1d4ed8';x.font='600 27px Inter, sans-serif';x.fillText(SITE,W/2,1040);
+ var a=document.createElement('a');a.download='APTET_Certificate_'+A.name.replace(/[^\w]+/g,'_')+'_'+CONFIG.TEST_ID+'.png';a.href=cv.toDataURL('image/png');document.body.appendChild(a);a.click();a.remove();
+};
+
+/* ============ time sync + boot ============ */
+(function(){
+ refreshSched();
+ var boot=function(){
+  refreshSched();
+  var cur=null;try{cur=LS.getItem(KP+'cur')}catch(e){}
+  var att=cur?loadAtt(cur):null;
+  if(att){A=att;
+   if(att.done){showResult();if(!att.sent&&hasUrl())sendScore()}
+   else if(nowMs()>=att.deadline){finalize(true)}
+   else enter(att,true);
+  }
+ };
+ if(hasUrl()){var t0=Date.now();
+  fetch(CONFIG.SCRIPT_URL+'?action=time&_='+t0).then(function(r){return r.json()}).then(function(j){if(j&&j.now)SKEW=j.now-(Date.now()+t0)/2}).catch(function(){}).then(boot);
+ }else boot();
+})();
+</script>
+</body>
+</html>
